@@ -36,10 +36,15 @@
     </div>
 
     <!-- combo and minify scripts when not logged in -->
+    <squarespace:script src="blocks-classes.min.js" combo="{.if authenticatedAccount}false{.or}true{.end}" />
+
     <squarespace:script src="site.js" combo="{.if authenticatedAccount}false{.or}true{.end}" />
 
     <!-- other scripts, and footer code injection -->
     {squarespace-footers}
 
+  <script>
+    console.log({@|json});
+  </script>
   </body>
 </html>
