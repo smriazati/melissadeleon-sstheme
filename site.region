@@ -35,7 +35,25 @@
 
       <!--Footer with open block field -->
       <footer class="site-footer">
-        <squarespace:block-field id="footerBlocks" columns="12" />
+        {#  <squarespace:block-field id="footerBlocks" columns="12" />  }
+        <div class="footer-social">
+          <div class="text-wrapper">
+            <h3>Follow</h3>
+            <p>@melissadeleonstyling</p>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <squarespace:navigation navigationId="siteNav" template="site-navigation" />
+        </div>
+        <div class="footer-cta">
+          <div class="text-wrapper">
+            <h3>Get Inspired, Learn and Shop</h3>
+            <p><a href="/the-edit">The Edit</a></p>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <p>© 2021 Melissa de Leon Styling. <a href="https://www.otherlove.co/" target="_blank">Made with Otherlove.</a></p>
+        </div>
       </footer>
 
     </div>

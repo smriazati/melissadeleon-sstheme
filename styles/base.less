@@ -332,3 +332,43 @@ h3 {
     }
   }
 }
+
+/* footer */
+
+.site-footer {
+  background: @cream;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100px 30px;
+  border-top: 1px solid @night;
+  .footer-social,
+  .footer-nav,
+  .footer-cta {
+    padding-top: 42px;
+  }
+  .footer-social {
+    grid-column: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .footer-nav {
+    grid-column: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .footer-cta {
+    padding-left: 42px;
+    grid-column: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background: @night;
+    * {
+      color: @cream;
+    }
+  }
+  .footer-copyright {
+    grid-column: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
