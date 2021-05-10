@@ -17,7 +17,12 @@
 
         <!-- site title or logo -->
         {.section website}
-          <h1 class="site-title-heading" data-content-field="site-title">
+          <div class="site-logo">
+            <a href="/" class="site-title-link">
+              <img src="{logoImageUrl}" alt="melissa de leon logo" />
+            </a>
+          </div>
+          <h1 class="visually-hidden site-title-heading" data-content-field="site-title">
             <a href="/" class="site-title-link">{siteTitle}</a>
           </h1>
         {.end}
