@@ -43,7 +43,7 @@
           </div>
         </div>
         <div class="footer-nav">
-          <squarespace:navigation navigationId="siteNav" template="site-navigation" />
+          <squarespace:navigation navigationId="footerNav" template="site-navigation" />
         </div>
         <div class="footer-cta">
           <div class="text-wrapper">
