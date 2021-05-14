@@ -20,6 +20,7 @@
 
 html {
   font-size: 16px;
+  width: 100%;
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -43,14 +44,63 @@ a {
 }
 
 .site-container {
+  min-height: 100%;
+  min-height: 100vh;
   width: 100%;
   width: 100vw;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .visually-hidden {
   display: none;
 }
+
+button {
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+
+
+/* TYPOGRAPHY */
+
+h1 {
+  font-family: 'FreightNeo Pro', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 43px;
+}
+
+h2 {
+  font-family: 'FreightNeo Pro', sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px; /* identical to box height, or 111% */
+}
+
+h3 {
+  font-family: 'FreightSans Pro', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 22px;  /* identical to box height, or 147% */
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* main container */
+
+.content-container {
+  width: 100%;
+}
+
 
 /* Homepage
 ***************************************************/
@@ -205,6 +255,7 @@ body.homepage {
 
   .bio-image {
     padding: 10%;
+    margin-bottom: 189px;
     figure {
       position: relative;
     }
@@ -275,34 +326,6 @@ body.homepage {
 
 
 
-/* TYPOGRAPHY */
-
-h1 {
-  font-family: 'FreightNeo Pro', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 43px;
-}
-
-h2 {
-  font-family: 'FreightNeo Pro', sans-serif;
-  font-style: italic;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 20px; /* identical to box height, or 111% */
-}
-
-h3 {
-  font-family: 'FreightSans Pro', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 22px;  /* identical to box height, or 147% */
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
-
 /* header */
 
 .site-header {
@@ -312,6 +335,10 @@ h3 {
   justify-content: space-between;
 }
 
+.site-logo {
+  padding-left: 24px;
+  padding-top: 24px;
+}
 .site-navigation {
   .site-navigation-list {
     display: flex;
@@ -336,6 +363,7 @@ h3 {
 /* footer */
 
 .site-footer {
+  width: 100%;
   background: @cream;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -350,11 +378,39 @@ h3 {
     grid-column: 1;
     grid-row-start: 1;
     grid-row-end: 2;
+    margin-left: 24px;
+    h3 {
+      font-family: FreightSans Pro;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 14px;
+      letter-spacing: 0.1em;
+      text-align: left;
+    }
+    p {
+      font-family: FreightNeo Pro;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0em;
+      text-align: left;      
+    }
   }
   .footer-nav {
     grid-column: 2;
     grid-row-start: 1;
     grid-row-end: 2;
+    * {
+      font-family: FreightNeo Pro;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
   }
   .footer-cta {
     padding-left: 42px;
@@ -365,10 +421,109 @@ h3 {
     * {
       color: @cream;
     }
+    h3 {
+      font-family: FreightSans Pro;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 14px;
+      letter-spacing: 0.1em;
+      text-align: left;
+    }
+    nav button {
+      background: transparent;
+      a {
+        font-family: FreightSans Pro;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0.1em;
+        text-align: left;  
+      }
+    }
   }
   .footer-copyright {
     grid-column: 1;
     grid-row-start: 2;
     grid-row-end: 3;
+    margin-left: 24px;
+    * {
+      font-family: FreightSans Pro;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+  }
+}
+
+
+/* ABOUT */
+.about {
+  background: @blush;
+  .site-header {
+    background: @blush;
+  }
+
+  .sqs-row:before, .sqs-row:after { 
+    display: none;
+  }
+
+  main.content-container > div > div {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: min-content 200px min-content;
+    > * {
+      width: 100%;
+    }
+
+    > *:first-child {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    > *:nth-child(2) {
+      grid-column-start: 2;
+      grid-column-end: 4;
+      grid-row-start: 2;
+  }
+
+
+    .about-headline {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+    .about-image {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+    .about-main-text {
+      grid-column-start: 2;
+      grid-column-end: 5;
+      grid-row-start: 3;
+      grid-row-end: 4;
+    }
+    .about-quote {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 4;
+      grid-row-end: 5;
+    }
+    .about-cta-button {
+      grid-column-start: 1;
+      grid-column-end: 5;
+      grid-row-start: 5;
+      grid-row-end: 6;
+    }
   }
 }

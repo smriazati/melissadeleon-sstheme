@@ -35,7 +35,6 @@
 
       <!--Footer with open block field -->
       <footer class="site-footer">
-        {#  <squarespace:block-field id="footerBlocks" columns="12" />  }
         <div class="footer-social">
           <div class="text-wrapper">
             <h3>Follow</h3>
@@ -43,16 +42,16 @@
           </div>
         </div>
         <div class="footer-nav">
-          <squarespace:navigation navigationId="footerNav" template="site-navigation" />
+          <squarespace:block-field id="footerBlocks" columns="1" />
         </div>
         <div class="footer-cta">
-          <div class="text-wrapper">
+          <nav class="text-wrapper">
             <h3>Get Inspired, Learn and Shop</h3>
-            <p><a href="/the-edit">The Edit</a></p>
-          </div>
+            <button><a href="/the-edit">The Edit</a></button>
+          </nav>
         </div>
         <div class="footer-copyright">
-          <p>© 2021 Melissa de Leon Styling. <a href="https://www.otherlove.co/" target="_blank">Made with Otherlove.</a></p>
+          <p>© <span id="copyrightYear"></span> Melissa de Leon Styling. <a href="https://www.otherlove.co/" target="_blank">Made with Otherlove.</a></p>
         </div>
       </footer>
 
@@ -67,7 +66,21 @@
     {squarespace-footers}
 
   <script>
-    console.log({@|json});
+    const ssData = {@|json};
+    // ssData.collection.urlId
+    function printYear() {
+      var d = new Date();
+      var n = d.getFullYear();
+      document.getElementById("copyrightYear").innerHTML = n;
+    }
+    
+    document.addEventListener("DOMContentLoaded", function(event) { 
+      printYear();
+
+      const currentPage = ssData.collection.urlId;
+      document.querySelector('body').classList.add(currentPage)
+    });
+    
   </script>
   </body>
 </html>
