@@ -1,0 +1,134 @@
+<div class="hero">
+    <div class="image-wrapper">
+        <img src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/1621105861249-PCZG779893DE1LU9JHB9/ke17ZwdGBToddI8pDm48kA6C66wS3I1M_OEgRcDmJ38UqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKckncyx9uznpXYRFJvhmjrwZi_ljDV2KQM1DRWpGa_deXXmNOIEe1u0A5mego32Ni0/DSC07796+1.jpg?format=2500w" />
+    </div>
+    <div class="text-wrapper">
+        <h1><em>Commercial & Editorial</em> styling</h1>
+        <p>Style / Wardrobe / Image</p>
+    </div>
+</div>
+
+<div class="intro-row">
+    <div class="col">
+        <div class="text-wrapper">
+            <p>At MdS, we love being a trusted source of wardrobe and style guidance for brands and businesses.</p>
+            <p>We provide styling assistance for headshots, e-commerce, lookbook imagery, print and digital advertisements, and website and social media imagery.</p>
+            <p>We partner with models for development/portfolio enhancement.</p>
+            <p>We assist print and digital publications to create strong editorials that tell a story, providing styling for both wardrobe and sets.</p>
+        </div>
+    </div>
+    <div class="col">
+        <div class="text-wrapper">
+            <p>Our Commercial services include</p>
+        </div>
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-headline">
+                    <h3>Style Consultation</h3>
+                </div>
+                <div class="accordion-content">
+                    <p>We learn and partner with your vision and goals, provide any insight and ideas, and gather specifics on style preferences, color stories, and sizing.</p>
+                </div>
+            </div>
+             <div class="accordion-item">
+                <div class="accordion-headline">
+                    <h3>Wardrobe Sourcing</h3>
+                </div>
+                <div class="accordion-content">
+                    <p>With your vision and goals in mind, we find and collect the perfect options to choose from for shoot day.</p>
+                </div>
+            </div>
+             <div class="accordion-item">
+                <div class="accordion-headline">
+                    <h3>Day-of-Styling</h3>
+                </div>
+                <div class="accordion-content">
+                    <p>We arrive with a rack of our wardrobe options, steam, curate outfits paired with accessories, work alongside other vendors (hair/makeup, photographer, videographer), and provide touch ups throughout.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="cta-button">
+    <button><a href="/contact">Want to know more? <br /> Inquire about our commercial availability here.</a></button>
+</div>
+
+<div class="masonry-gallery">
+    <div class="gallery-item">
+        <figure>
+            <img src="" alt="">
+            <figcaption></figcaption>
+        </figure>
+    </div>
+    <div class="gallery-item">
+        <figure>
+            <img src="" alt="">
+            <figcaption></figcaption>
+        </figure>
+    </div>
+    <div class="gallery-item">
+        <figure>
+            <img src="" alt="">
+            <figcaption></figcaption>
+        </figure>
+    </div>
+    <div class="gallery-item">
+        <figure>
+            <img src="" alt="">
+            <figcaption></figcaption>
+        </figure>
+    </div>
+    <div class="gallery-item">
+        <figure>
+            <img src="" alt="">
+            <figcaption></figcaption>
+        </figure>
+    </div>
+    <div class="gallery-item">
+        <figure>
+            <img src="" alt="">
+            <figcaption></figcaption>
+        </figure>
+    </div>
+</div>
+
+<div class="masonry-gallery">
+    <div class="gallery-item">
+        <figure>
+            <img src="" alt="">
+            <figcaption></figcaption>
+        </figure>
+    </div>
+    <div class="gallery-item">
+        <figure>
+            <img src="" alt="">
+            <figcaption></figcaption>
+        </figure>
+    </div>
+    <div class="gallery-item">
+        <figure>
+            <img src="" alt="">
+            <figcaption></figcaption>
+        </figure>
+    </div>
+    <div class="gallery-item">
+        <figure>
+            <img src="" alt="">
+            <figcaption></figcaption>
+        </figure>
+    </div>
+    <div class="gallery-item">
+        <figure>
+            <img src="" alt="">
+            <figcaption></figcaption>
+        </figure>
+    </div>
+    <div class="gallery-item">
+        <figure>
+            <img src="" alt="">
+            <figcaption></figcaption>
+        </figure>
+    </div>
+</div>
