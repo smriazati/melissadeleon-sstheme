@@ -18,7 +18,6 @@
       <a href="{fullUrl}" class="permalink"><time datetime="{addedOn|date %F}">{addedOn|date %B %Y}</time></a>
     </p>
 
-    <!-- post title -->
     <h1 class="title" data-content-field="title">
       {.passthrough?}
         <a href="{sourceUrl}" target="_blank">{title}</a>
@@ -26,13 +25,7 @@
         <a href="{fullUrl}">{title}</a>
       {.end}
     </h1>
-    <!-- excerpt or body -->
-    {.if excerpt}
-      {excerpt}
-      <a class="link" href="{fullUrl}">Read More</a>
-    {.or}
-      {body}
-    {.end}
+
   </article>
 
 {.or}
