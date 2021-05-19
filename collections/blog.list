@@ -11,6 +11,10 @@
         <img {@|image-meta} />
       </a>
     {.end}
+    <p class="meta">
+      <a href="{fullUrl}" class="permalink"><time datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y}</time></a>
+    </p>
+
     <!-- post title -->
     <h1 class="title" data-content-field="title">
       {.passthrough?}
