@@ -802,3 +802,46 @@ body.contact {
     padding-top: 100px;
   }
 }
+
+// the edit
+
+body.the-edit {
+  main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    .page-title {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      h2 {
+        text-align: right;
+        .freightNeoProItal;
+        font-style: italic;
+        font-weight: 500;
+        font-size: 100px;
+        line-height: 52px;
+      }
+    }
+    .page-description {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+
+    }
+
+    article {
+      grid-row: span 1;
+    }
+    article:nth-child(even) {
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+    article:nth-child(odd) {
+      grid-column-start: 3;
+      grid-column-end: 4;
+    }
+  }
+}

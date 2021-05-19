@@ -1,5 +1,5 @@
-<h2>The Edit</h2>
-<p>{collection.description}</p>
+<div class="page-title"><h2>The Edit</h2></div>
+<div class="page-description"><p>{collection.description}</p><div>
 
 <!-- item loop -->
 {.repeated section items}
