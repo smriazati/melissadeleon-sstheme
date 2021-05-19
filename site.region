@@ -39,21 +39,33 @@
         <div class="footer-social">
           <div class="text-wrapper">
             <h3>Follow</h3>
-            <p>@melissadeleonstyling</p>
+            <p><a href="https://www.instagram.com/melissadeleonstyling/" target="_blank">@MelissadeLeonStyling</a></p>
           </div>
         </div>
         <div class="footer-nav">
-          <squarespace:block-field id="footerBlocks" columns="1" />
+          {#  <squarespace:block-field id="footerBlocks" columns="1" />  }
+            <ul>
+              <li><a href="/about">About</a></li>
+              <li><a href="/offerings">Offerings</a></li>
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/press">Press</a></li>
+              <li><a href="/clients">Client Portal</a></li>
+            </ul>
         </div>
-        <div class="footer-cta">
-          <nav class="text-wrapper">
+        <nav class="footer-cta">
+          <a href="/the-edit" class="text-wrapper">
             <h3>Get Inspired, Learn and Shop</h3>
-            <button><a href="/the-edit">The Edit</a></button>
-          </nav>
-        </div>
+            <p>The Edit</p>
+          </a>
+        </nav>
         <div class="footer-copyright">
           <p>© <span id="copyrightYear"></span> Melissa de Leon Styling. <a href="https://www.otherlove.co/" target="_blank">Made with Otherlove.</a></p>
         </div>
+        <a href="/the-edit" class="footer-icon">
+            <div class="icon">
+              <img src="/assets/icons/arrow.png" alt="white arrow surrounded by a circle pointing to the right" />
+          </div>
+        </a>
       </footer>
 
     </div>
@@ -75,11 +87,37 @@
       document.getElementById("copyrightYear").innerHTML = n;
     }
     
+
+    // offerings page > captions are links
+    function convertCaptionsIntoLinks() {
+      const captions = document.querySelectorAll('main figcaption.image-caption-wrapper');
+      {#  console.log(captions);  }
+      captions.forEach(c => {
+        const href = c.previousElementSibling.getAttribute("href");
+        var caption = c.querySelector('.image-caption');
+        const captionText = caption.outerHTML;
+
+        if (href && captionText) {
+          var a = document.createElement('a');
+          a.href = href;
+          a.classList.add('caption-wrapper-link')
+          a.innerHTML = captionText;
+
+          c.insertBefore(a, caption);
+          caption.remove();
+          
+        }
+      })
+    }
     document.addEventListener("DOMContentLoaded", function(event) { 
       printYear();
 
       const currentPage = ssData.collection.urlId;
       document.querySelector('body').classList.add(currentPage)
+
+      if (currentPage === 'offerings') {
+        convertCaptionsIntoLinks();
+      }
     });
     
   </script>

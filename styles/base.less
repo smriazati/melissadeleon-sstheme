@@ -30,6 +30,70 @@
 @smoke: #E7E3DF; 
 @night: #1E1C1B;
 
+
+
+.freightSans {
+  font-family: "FreightSansProMediumRegular", sans-serif;
+}
+.freightSansItal {
+  font-family: "FreightSansProMediumItalic", sans-serif;
+}
+.freightNeoPro {
+  font-family: "FreightNeoProMediumRegular", sans-serif;
+
+}
+.freightNeoProItal {
+  font-family: "FreightNeoProMediumItalic", sans-serif;
+}
+
+
+/* mixins */
+
+
+.h1 {
+  .freightNeoPro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 43px;
+}
+
+.h2 {
+  .freightNeoProItal;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px; /* identical to box height, or 111% */
+}
+
+.h3 {
+  .freightSans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 22px;  /* identical to box height, or 147% */
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.h4 {
+  .freightSansItal;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+}
+
+.p {
+  .freightSans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+}
+
 /* General syles
 ***************************************************/
 * {
@@ -85,35 +149,37 @@ button {
   border-radius: 0;
 }
 
+body:not(.button-style-default).button-style-solid .sqs-editable-button, body:not(.button-style-default).button-style-solid .sqs-editable-button-style,
+body:not(.button-style-default) .sqs-editable-button, 
+body:not(.button-style-default) .sqs-editable-button-font {
+  .h3;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: @cream;
+  background: @night;
+  transition: .3s ease-in all !important;;
+}
+
+body:not(.button-style-default).button-style-solid .sqs-editable-button:hover, body:not(.button-style-default).button-style-solid .sqs-editable-button-style:hover {
+  opacity: 1;
+  background: @cream;
+  color: @night;
+}
+
 
 
 /* TYPOGRAPHY */
 
-h1 {
-  font-family: 'FreightNeoProMediumRegular', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 43px;
-}
 
-h2 {
-  font-family: 'FreightNeoProMediumRegular', sans-serif;
-  font-style: italic;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 20px; /* identical to box height, or 111% */
-}
-
-h3 {
-  font-family: 'FreightSansProMediumRegular', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 22px;  /* identical to box height, or 147% */
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
+h1 { .h1 }
+h2 { .h1 }
+h3 { .h2 }
+h4 { .h3 }
+p { .p }
 
 body {
   font-family: 'FreightSansProMediumRegular', sans-serif;
@@ -360,6 +426,13 @@ body.homepage {
   padding-left: 24px;
   padding-top: 24px;
 }
+
+body:not(.homepage) {
+  .site-logo {
+    width: 221px;
+  }
+}
+
 .site-navigation {
   .site-navigation-list {
     display: flex;
@@ -373,9 +446,6 @@ body.homepage {
       a {
         color: @night;
         transition: .3s ease all;
-        &:hover {
-          color: @marigold;
-        }
       }
     }
   }
@@ -387,20 +457,28 @@ body.homepage {
   width: 100%;
   background: @cream;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 100px 30px;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-template-rows: min-content min-content;
   border-top: 1px solid @night;
+  align-items: end;
+  > * {
+    display: block;
+  }
   .footer-social,
   .footer-nav,
   .footer-cta {
-    padding-top: 42px;
+    padding-top: 45px;
   }
   .footer-social {
     grid-column: 1;
     grid-row-start: 1;
     grid-row-end: 2;
     margin-left: 24px;
+    * {
+      color: @night;
+    }
     h3 {
+      .h3;
       font-size: 12px;
       font-style: normal;
       font-weight: 400;
@@ -409,37 +487,53 @@ body.homepage {
       text-align: left;
     }
     p {
+      .freightNeoPro;
       font-size: 18px;
       font-style: normal;
       font-weight: 400;
       line-height: 22px;
       letter-spacing: 0em;
-      text-align: left;      
+      text-align: left;     
+      margin-top: 5px;
     }
   }
   .footer-nav {
     grid-column: 2;
     grid-row-start: 1;
     grid-row-end: 2;
+    ul {
+      list-style: none;
+      display: flex;
+      > * {
+        padding: 25px;
+        padding-bottom: 0;
+      }
+    }
     * {
+      .freightNeoPro;
       font-size: 18px;
       font-style: normal;
       font-weight: 400;
       line-height: 22px;
       letter-spacing: 0em;
-      text-align: left;
+      color: @night;
     }
   }
   .footer-cta {
     padding-left: 42px;
     grid-column: 3;
     grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row-end: 2;
     background: @night;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     * {
       color: @cream;
     }
     h3 {
+      .h3;
       font-size: 12px;
       font-style: normal;
       font-weight: 400;
@@ -447,23 +541,44 @@ body.homepage {
       letter-spacing: 0.1em;
       text-align: left;
     }
-    nav button {
+    
+    p {
+      margin-top: 5px;
       background: transparent;
-      a {
-          font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 14px;
-        letter-spacing: 0.1em;
-        text-align: left;  
-      }
+      text-align: left;  
+      .freightNeoPro;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0em;
+    }
+  }
+  .footer-icon,
+  .footer-copyright {
+    padding-top: 12px;
+    padding-bottom: 24px;
+  }
+  .footer-icon {
+    grid-column: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background: @night;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 24px;
+    width: 100%;
+    height: 100%;
+    .icon {
+      width: 20px;
     }
   }
   .footer-copyright {
-    grid-column: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
-    margin-left: 24px;
+    padding-left: 24px;
     * {
       font-size: 10px;
       font-style: normal;
@@ -471,6 +586,7 @@ body.homepage {
       line-height: 20px;
       letter-spacing: 0em;
       text-align: left;
+      color: @night;
     }
   }
 }
@@ -490,7 +606,7 @@ body.homepage {
   main.content-container > div > div {
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr max-content 1fr;
     grid-template-rows: min-content 200px min-content;
     > * {
       width: 100%;
@@ -540,5 +656,149 @@ body.homepage {
       grid-row-start: 5;
       grid-row-end: 6;
     }
+  }
+}
+
+/* offerings */
+
+body.offerings {
+  main > div > .sqs-row {
+    display: flex;
+    flex-direction: row;
+    .sqs-col-6 {
+      width: 100%;
+    }
+    [class*="sqs-col"] {
+      float: none;
+    }
+    > * {
+      flex: 50%;
+    }
+
+    .sqs-block-image {
+      padding-bottom: 0 !important;
+    }
+    .sqs-block-image .caption-wrapper-link {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .sqs-block-image .image-block-outer-wrapper.layout-caption-overlay .image-caption-wrapper {
+        background: rgba(16, 16, 16, 0.3);
+        transition: .6s ease-out all;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sqs-block-image .image-block-outer-wrapper.layout-caption-overlay .image-caption-wrapper p {
+      .freightNeoPro;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 48px;
+      line-height: 52px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+  }
+
+  // hover fx
+  main > div > .sqs-row:hover {
+    .sqs-block-image .image-block-outer-wrapper.layout-caption-overlay .image-caption-wrapper {
+      background: rgba(16, 16, 16, 0.8);
+    }
+    .sqs-block-image .image-block-outer-wrapper.layout-caption-overlay .image-caption-wrapper:hover {
+      background: rgba(16, 16, 16, 0.3);
+    }
+  }
+}
+
+
+/* contact page */
+
+body.contact {
+  background: @clay;
+  .site-header {
+    background: @clay;
+  }
+
+  main {
+    margin-top: 60px;
+  }
+
+  main .sqs-layout > .sqs-row:first-child {
+    padding-bottom: 100px;
+    > .col {
+      width: 50% !important;
+    }
+
+    // contact form
+    > .col:last-child {
+      padding-left: 60px;
+      padding-right: 60px;
+      .sqs-block-html {
+        margin-bottom: 30px;
+      }
+
+      .form-wrapper .field-list .field .field-element {
+        background: transparent;
+        transition: .3s ease all;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid @night;
+      }
+      .form-wrapper .field-list .field .field-element:focus-visible {
+        background: @blush;
+        outline: 0;
+      }
+      .form-wrapper .field-list .field select {
+        border: 0;
+      padding: 10px;
+      background: @blush;
+      }
+    }
+
+    sqs-block-content
+    // grid images
+    .sqs-block-image .image-block-outer-wrapper:not(.image-block-v2) .intrinsic {
+      margin: unset !important;
+      max-width: 100% !important;
+    }
+    .col:first-child {
+      display: grid;
+      grid-template-columns: .35fr .25fr .15fr .25fr;
+      grid-column-gap: 20px;
+      grid-template-rows: 100px min-content min-content;
+
+      .sqs-block-image:first-child {
+        padding-right: 30px;
+        padding-top: 0;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+      .sqs-block-image:nth-child(2) {
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        margin-top: 30px;
+      }
+      .sqs-block-image:last-child {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        width: 75%;
+      }
+    }
+  } 
+  main .sqs-layout > .sqs-row:last-child {
+    background: @cream;
+    padding-top: 100px;
   }
 }
