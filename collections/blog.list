@@ -7,8 +7,8 @@
   <article id="post-{id}" class="blog-list-item {@|item-classes}" data-item-id="{id}">
     <!-- main image (thumbnail) -->
     {.main-image?}
-      <div class="image-border"></div>
       <a href="{fullUrl}" class="main-image content-fill">
+        <div class="image-border"></div>
         <img {@|image-meta} />
       </a>
     {.end}
