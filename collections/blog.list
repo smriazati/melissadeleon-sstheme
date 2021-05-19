@@ -11,6 +11,7 @@
         <img {@|image-meta} />
       </a>
     {.end}
+    
     <p class="meta">
       {.repeated section categories}
         <a class="category" href="{collection.fullUrl}?category={@|url-encode}">{@}</a>{.alternates with},
