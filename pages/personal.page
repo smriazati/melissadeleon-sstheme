@@ -10,6 +10,7 @@
 
 <div class="personal-offerings-grid">
     <div class="intro-image-wrapper">
+        <div class="clay-bg"></div>
         <img src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/1621106089228-1O9R2ANX44BGI5N6A819/ke17ZwdGBToddI8pDm48kO45LQTVfHqGhMf7HRxMoXtZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVGhrTjV2_WvP0LZSev6UG8AwHPsoLmi2xveHst335LKwrqlkSjgndxLH87mvUIW1sM/Raws-1603+1.jpg?format=750w" />
     </div>
 
@@ -43,34 +44,10 @@
                 </div>
             </div>
         </div>
+            
+    </div> 
 
-        <div class="phases-wrapper">
-            <div id="phase-1" class="phase-item">
-                <div class="phase-headline">
-                    <h3>Phase 1: Consultation + Style Discovery</h3>
-                </div>
-                <div class="phase-text">
-                    <p>Our most thorough and valuable part of the process. During this phase, we gather your inspirations, learn about your story and lifestyle, and develop your personalized Style Profile. We will teach you practical tools based on our discoveries so you can make confident choices with your style going forward.</p>
-                    <p>This phase is hosted by MdS in a comfortable, well-appointed venue, allowing you to enjoy a sense of intentional relaxation, respite, and care.</p>
-                    <p>Based on our findings, we will curate your personalized MdS Virtual Style Profile. Your Style Profile will be available on a password-protected client portal for you to continuously refer to and interact with, and includes your colors, body type, measurements, mood board, and shoppable links, all in one safe space.</p>
-                </div>
-                <div class="phase-image">
-                    <img src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/1621106142767-KHN3QGFI2UOI3E81798U/ke17ZwdGBToddI8pDm48kMjMPsMWVmBG26diiOjQIgBZw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7Xj1nVWs2aaTtWBneO2WM-tbqr8_vFyH7ZVVkZH-8e2KphHSP_1VzMIZDJylzH_AlA/Rectangle+102.jpg?format=2500w" alt="" />
-                </div>
-            </div>
-            <div id="phase-1" class="phase-item">
-                <div class="phase-headline">
-                    <h3>Phase 1: Consultation + Style Discovery</h3>
-                </div>
-                <div class="phase-text">
-                    <p>Our most thorough and valuable part of the process. During this phase, we gather your inspirations, learn about your story and lifestyle, and develop your personalized Style Profile. We will teach you practical tools based on our discoveries so you can make confident choices with your style going forward.</p>
-                    <p>This phase is hosted by MdS in a comfortable, well-appointed venue, allowing you to enjoy a sense of intentional relaxation, respite, and care.</p>
-                    <p>Based on our findings, we will curate your personalized MdS Virtual Style Profile. Your Style Profile will be available on a password-protected client portal for you to continuously refer to and interact with, and includes your colors, body type, measurements, mood board, and shoppable links, all in one safe space.</p>
-                </div>
-                <div class="phase-image">
-                    <img src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/1621106142767-KHN3QGFI2UOI3E81798U/ke17ZwdGBToddI8pDm48kMjMPsMWVmBG26diiOjQIgBZw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7Xj1nVWs2aaTtWBneO2WM-tbqr8_vFyH7ZVVkZH-8e2KphHSP_1VzMIZDJylzH_AlA/Rectangle+102.jpg?format=2500w" alt="" />
-                </div>
-            </div>
+    <div class="phases-wrapper">
             <div id="phase-1" class="phase-item">
                 <div class="phase-headline">
                     <h3>Phase 1: Consultation + Style Discovery</h3>
@@ -94,7 +71,7 @@
                     <p>Notes of our findings, photos of outfit pairings, and shoppable links of suggested wardrobe additions will be uploaded to your Style Profile.</p>
                 </div>
                 <div class="phase-image">
-                    <img src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/1621106142767-KHN3QGFI2UOI3E81798U/ke17ZwdGBToddI8pDm48kMjMPsMWVmBG26diiOjQIgBZw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7Xj1nVWs2aaTtWBneO2WM-tbqr8_vFyH7ZVVkZH-8e2KphHSP_1VzMIZDJylzH_AlA/Rectangle+102.jpg?format=2500w" alt="" />
+                    <img src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/1621533904178-7R4KGAQ00E5C2BWZ3509/ke17ZwdGBToddI8pDm48kNTeaMky8yoQDxxhMt-vg1JZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVGuK9LMzbDytOb7qbpFsRuWMvfUCfOPg8X7ayXSl0E3FbgdyDHYGf6U4mwRTE1dP2k/heirraleigh+%287+of+217%29+1.jpg?format=1000w" alt="" />
                 </div>
             </div>
             <div id="phase-3" class="phase-item">
@@ -107,7 +84,7 @@
                     <p>Should any of the new pieces require alterations, we will schedule those fittings until it’s just right. We will also complete any returns or exchanges.</p>
                 </div>
                 <div class="phase-image">
-                    <img src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/1621106142767-KHN3QGFI2UOI3E81798U/ke17ZwdGBToddI8pDm48kMjMPsMWVmBG26diiOjQIgBZw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7Xj1nVWs2aaTtWBneO2WM-tbqr8_vFyH7ZVVkZH-8e2KphHSP_1VzMIZDJylzH_AlA/Rectangle+102.jpg?format=2500w" alt="" />
+                    <img src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/1621533889628-TWJYLBCQIDKN31JNE7K6/ke17ZwdGBToddI8pDm48kNTeaMky8yoQDxxhMt-vg1JZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVGuK9LMzbDytOb7qbpFsRuWMvfUCfOPg8X7ayXSl0E3FbgdyDHYGf6U4mwRTE1dP2k/DSC_6592+1.jpg?format=1000w" alt="" />
                 </div>
             </div>
             <div id="phase-4" class="phase-item">
@@ -118,67 +95,69 @@
                     <p>Bypass any future stress surrounding style choices. If you have questions going forward (choosing an outfit for a special event, purchasing a new wardrobe item, or pairing shoes and accessories to an outfit) please consider us a go-to resource for real-time help! Call, text, email, or chat with us directly via your MdS VIrtual Styling Home. We are here to help and cheer you on!</p>
                 </div>
                 <div class="phase-image">
-                    <img src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/1621106142767-KHN3QGFI2UOI3E81798U/ke17ZwdGBToddI8pDm48kMjMPsMWVmBG26diiOjQIgBZw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7Xj1nVWs2aaTtWBneO2WM-tbqr8_vFyH7ZVVkZH-8e2KphHSP_1VzMIZDJylzH_AlA/Rectangle+102.jpg?format=2500w" alt="" />
+                    <img src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/1621533874220-05Q8UGKFAZ4JQRUJBIEN/ke17ZwdGBToddI8pDm48kNTeaMky8yoQDxxhMt-vg1JZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVGuK9LMzbDytOb7qbpFsRuWMvfUCfOPg8X7ayXSl0E3FbgdyDHYGf6U4mwRTE1dP2k/_DSC9377+1.jpg?format=1000w" alt="" />
                 </div>
             </div>
         </div>
-            
-    </div> <!-- / phases -->
-
-
 </div> <!-- / grid -->
 
 <div class="cta-banner">
     <div class="cta-submark">
-        <img src="" alt="" />
+        <img src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/1620355390882-1GYARXEFL2BBY226QN3I/ke17ZwdGBToddI8pDm48kMeUlLXd1lQATCwZ_Dzgc09Zw-zPPgdn4jUwVcJE1ZvWhcwhEtWJXoshNdA9f1qD7V-YPeD73Gm9fV7Jjk6f1uvb4B_tsk0fvYoJ4JP87-uhzFJqWeupQjCAIvCtBqNWBg/Image+description?format=300w" alt="melissa de leon logo" />
     </div>
     <div class="cta-headline">
         <p>Ready to get started?</p>
     </div>
     <div class="cta-button">
-        <button><a href="">Contact Us Here!</a></button>
+        <button class="flat"><a href="">Contact Us Here!</a></button>
     </div>
 </div>
 
-<div class="accordion ala-carte">
-    <div class="accordion-item closed">
-        <div class="accordion-headline">
-            <h3>Bridal + Wedding Styling</h3>
-        </div>
-        <div class="accordion-content">
-            <p>Step confidently into a moment you will remember forever. Melissa will be your guide to discovering your true wedding style vision. From selecting wedding colors and outfitting the entire bridal party, to helping you choose the perfect bridal gown and accessories for your day, she expertly takes into consideration your personality and story, event season, venue, florals, skin/hair tones and body type. A la carte outfitting services are available for engagement photos, wedding showers, bachelorette events, rehearsal dinner, and honeymoon. <em>Limited Bridal + Wedding Styling spots available for 2021-2022.</em></p>
-        </div>
+
+<div class="ala-carte-wrapper">
+    <div class="ala-carte-headline">
+        <h3>A La Carte Services</h3>
     </div>
-    <div class="accordion-item closed">
-        <div class="accordion-headline">
-            <h3>Special Occasion Styling</h3>
+    <div class="accordion ala-carte">
+        <div class="accordion-item closed">
+            <div class="accordion-headline">
+                <h4>Bridal + Wedding Styling</h4>
+            </div>
+            <div class="accordion-content">
+                <p>Step confidently into a moment you will remember forever. Melissa will be your guide to discovering your true wedding style vision. From selecting wedding colors and outfitting the entire bridal party, to helping you choose the perfect bridal gown and accessories for your day, she expertly takes into consideration your personality and story, event season, venue, florals, skin/hair tones and body type. A la carte outfitting services are available for engagement photos, wedding showers, bachelorette events, rehearsal dinner, and honeymoon. <em>Limited Bridal + Wedding Styling spots available for 2021-2022.</em></p>
+            </div>
         </div>
-        <div class="accordion-content">
-            <p>We will help you find the perfect outfit for that special occasion coming up, whether that’s a black tie event, party, graduation, special dinner or date night. We will help you consider options and choose the best outfit, paired with shoes and accessories, that makes you feel like your truest, most powerful self.</p>
+        <div class="accordion-item closed">
+            <div class="accordion-headline">
+                <h4>Special Occasion Styling</h4>
+            </div>
+            <div class="accordion-content">
+                <p>We will help you find the perfect outfit for that special occasion coming up, whether that’s a black tie event, party, graduation, special dinner or date night. We will help you consider options and choose the best outfit, paired with shoes and accessories, that makes you feel like your truest, most powerful self.</p>
+            </div>
         </div>
-    </div>
-    <div class="accordion-item closed">
-        <div class="accordion-headline">
-            <h3>Makeup Consultation with Mena Garcia</h3>
+        <div class="accordion-item closed">
+            <div class="accordion-headline">
+                <h4>Makeup Consultation with Mena Garcia</h4>
+            </div>
+            <div class="accordion-content">
+                <p>Much like our styling consultation, <a href="https://www.menagarciabeauty.com/" target="_blank">Mena</a> will assess your current makeup routine, lifestyle, skin type, tones, and budget, and teach you how to confidently apply your makeup going forward. She will also provide product recommendations specific to your skin type, tones, and style.</p>
+            </div>
         </div>
-        <div class="accordion-content">
-            <p>Much like our styling consultation, <a href="https://www.menagarciabeauty.com/" target="_blank">Mena</a> will assess your current makeup routine, lifestyle, skin type, tones, and budget, and teach you how to confidently apply your makeup going forward. She will also provide product recommendations specific to your skin type, tones, and style.</p>
+        <div class="accordion-item closed">
+            <div class="accordion-headline">
+                <h4>Family + Lifestyle Photoshoots</h4>
+            </div>
+            <div class="accordion-content">
+                <p>Allow us to help make your next personal photoshoot easy. We will develop and source cohesive outfits that are just right for your venue, vision, and style so you can relax and enjoy the memories, and images, for years to come.</p>
+            </div>
         </div>
-    </div>
-    <div class="accordion-item closed">
-        <div class="accordion-headline">
-            <h3>Family + Lifestyle Photoshoots</h3>
-        </div>
-        <div class="accordion-content">
-            <p>Allow us to help make your next personal photoshoot easy. We will develop and source cohesive outfits that are just right for your venue, vision, and style so you can relax and enjoy the memories, and images, for years to come.</p>
-        </div>
-    </div>
-    <div class="accordion-item closed">
-        <div class="accordion-headline">
-            <h3>Mds Styling Party</h3>
-        </div>
-        <div class="accordion-content">
-            <p>Enjoy an evening with friends learning from Melissa and shopping outfits surrounding a specific style theme, such as holiday outfits, day-to-night styling, or working from home. <em>Minimum 8 attendees required.</em></p>
+        <div class="accordion-item closed">
+            <div class="accordion-headline">
+                <h4>MdS Styling Party</h4>
+            </div>
+            <div class="accordion-content">
+                <p>Enjoy an evening with friends learning from Melissa and shopping outfits surrounding a specific style theme, such as holiday outfits, day-to-night styling, or working from home. <em>Minimum 8 attendees required.</em></p>
+            </div>
         </div>
     </div>
 </div>
@@ -188,11 +167,12 @@
         <img src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/1621106963964-K60H7N4C2OA3QQWOH4L6/ke17ZwdGBToddI8pDm48kFsLDPF552BxwatGI1Pz1lFZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpzi5oBJLjAKhPTCC_9MX6yUqmxIJjszP5swdSo7syfDfUQEoGYJ1itkbc4uxRI-xXg/Rectangle+93.jpg?format=1500w" alt="" />
     </div>
     <figure class="text-wrapper">
-        <blockquote>“I am really enjoying going into my closet and easily putting my hands on clothes to wear for work that I know will fit, look good, and be comfortable. In this time of so much angst, this is one thing that I don’t have to worry about and truly, gives me joy.”</blockquote>
-        <figcaption>—Renee J.</figcaption>
+        <blockquote>“I am really enjoying going into my closet and easily putting my hands on clothes to wear for work that I know will fit, look good, and be comfortable. In this time of so much angst, this is one thing that I don’t have to worry about and truly, gives me joy.”         <figcaption>—Renee J.</figcaption></blockquote>
     </figure>
 </div>
 
-<div class="cta-button">
-    <button><a href="/contact">Ready for personalized style guidance? </br> Get In touch here!</a></button>
+<div class="cta-button-wrapper">
+    <div class="cta-button">
+        <button><a href="/contact">Ready for personalized style guidance? </br> Get In touch here!</a></button>
+    </div>
 </div>
