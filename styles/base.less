@@ -1396,3 +1396,28 @@ body.about {
     }
   }
 }
+
+
+body.clients {
+  background: @clay;
+  .site-header {
+    background: @clay;
+  }
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      .button {
+        max-width: 50ch;
+        margin: 0 auto;
+        margin-top: 30px;
+      }
+    }
+  }
+}
