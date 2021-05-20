@@ -126,7 +126,6 @@
         const items = accordion.querySelectorAll('.accordion-item');
         items.forEach(item => {
           item.addEventListener('click', event => {
-            console.log(item);
             if (item.classList.contains('closed')) {
               item.classList.add('open');
               item.classList.remove('closed');
@@ -137,6 +136,16 @@
           })
         })
       })
+    }
+
+    function checkForFeaturedSinglePage() {
+      const isFeatured = document.querySelectorAll('article.featured');
+      const hasBlogItem = document.querySelectorAll('.blog-item');
+      if (isFeatured && hasBlogItem) {
+        return true;
+      } else {
+        return false;
+      }
     }
 
     document.addEventListener("DOMContentLoaded", function(event) { 
@@ -152,6 +161,11 @@
       var isAccordion = checkForAccordion();
       if (isAccordion) {
         activateAccordion();
+      }
+
+      var isFeaturedItem = checkForFeaturedSinglePage();
+      if (isFeaturedItem) {
+        document.querySelector('body').classList.add('featured-post')
       }
     });
     
