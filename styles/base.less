@@ -446,6 +446,21 @@ body:not(.homepage) {
       a {
         color: @night;
         transition: .3s ease all;
+        display: inline-block;
+        height: 4em;
+        width: 4em;
+        line-height: 4em;
+        -moz-border-radius: 30px;
+        border-radius: 2em;
+        border: 1px solid transparent;
+        transition: .3s ease all;
+        text-align: center;
+      }
+    }
+    .site-navigation-item.active-link,
+    .site-navigation-item:hover {
+      a {
+        border: 1px solid @night;
       }
     }
   }
