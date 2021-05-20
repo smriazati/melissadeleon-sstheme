@@ -926,3 +926,33 @@ body.the-edit {
 
 // the edit individual item
 
+body.the-edit  .blog-item {
+  width: 100%;
+  grid-column: span 3;
+  article,
+  .blog-item-pagination {
+    max-width: 65ch;
+    margin: 0 auto;
+  }
+  article {
+    a {
+      color: @night;
+    }
+    p.meta {
+      margin-bottom: 17px;
+      margin-bottom: 10px;
+    }
+    .category,
+    .tag {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding-right: 10px;
+    }
+  }
+  .blog-item-pagination {
+    margin-top: 10px;
+    a {
+      color: @night;
+    }
+  }
+}
