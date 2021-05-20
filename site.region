@@ -141,7 +141,7 @@
     function checkForFeaturedSinglePage() {
       const isFeatured = document.querySelectorAll('article.featured');
       const hasBlogItem = document.querySelectorAll('.blog-item');
-      if (isFeatured && hasBlogItem) {
+      if (isFeatured.length > 0 && hasBlogItem.length > 0) {
         return true;
       } else {
         return false;
