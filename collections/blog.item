@@ -1,4 +1,4 @@
-
+<div class="blog-item">
 {.section item}
 
   <!--WRAPPER-->
@@ -77,3 +77,4 @@
 
   </nav>
 {.end}
+</div>
