@@ -1,10 +1,10 @@
 <div class="hero">
     <div class="image-wrapper">
-        <img src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/1621105861249-PCZG779893DE1LU9JHB9/ke17ZwdGBToddI8pDm48kA6C66wS3I1M_OEgRcDmJ38UqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKckncyx9uznpXYRFJvhmjrwZi_ljDV2KQM1DRWpGa_deXXmNOIEe1u0A5mego32Ni0/DSC07796+1.jpg?format=2500w" />
+        <img src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/1621526401750-FMEHKZ0R9TDGERXPKA21/ke17ZwdGBToddI8pDm48kJdye1SANJzf6hvSRe7yKKJ7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0hx0TKp4jCW7sB_BGURRbuXnohgab11AaT_oL_DSYmYP9KFiX0qn1K27hpvkzbUH5A/DSC_0750-min.jpg?format=2500w" />
     </div>
     <div class="text-wrapper">
         <h1><em>Commercial & Editorial</em> styling</h1>
-        <p>Style / Wardrobe / Image</p>
+        <h2>Style / Wardrobe / Image</h2>
     </div>
 </div>
 
@@ -19,10 +19,10 @@
     </div>
     <div class="col">
         <div class="text-wrapper">
-            <p>Our Commercial services include</p>
+            <p class="h3">Our Commercial services include</p>
         </div>
         <div class="accordion">
-            <div class="accordion-item">
+            <div class="accordion-item closed">
                 <div class="accordion-headline">
                     <h3>Style Consultation</h3>
                 </div>
@@ -30,7 +30,7 @@
                     <p>We learn and partner with your vision and goals, provide any insight and ideas, and gather specifics on style preferences, color stories, and sizing.</p>
                 </div>
             </div>
-             <div class="accordion-item">
+             <div class="accordion-item closed">
                 <div class="accordion-headline">
                     <h3>Wardrobe Sourcing</h3>
                 </div>
@@ -38,7 +38,7 @@
                     <p>With your vision and goals in mind, we find and collect the perfect options to choose from for shoot day.</p>
                 </div>
             </div>
-             <div class="accordion-item">
+             <div class="accordion-item closed">
                 <div class="accordion-headline">
                     <h3>Day-of-Styling</h3>
                 </div>
@@ -51,9 +51,12 @@
 </div>
 
 
-<div class="cta-button">
-    <button><a href="/contact">Want to know more? <br /> Inquire about our commercial availability here.</a></button>
+<div class="cta-row">
+    <div class="cta-button">
+        <button><a href="/contact">Want to know more? <br /> Inquire about our commercial availability here.</a></button>
+    </div>
 </div>
+
 
 <div class="masonry-gallery">
     <div class="gallery-item">

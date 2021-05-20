@@ -109,6 +109,32 @@
         }
       })
     }
+
+    function checkForAccordion() {
+      const accordion = document.querySelector('.accordion');
+      if (accordion) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    function activateAccordion() {
+      const accordion = document.querySelector('.accordion');
+      const items = accordion.querySelectorAll('.accordion-item');
+      items.forEach(item => {
+        item.addEventListener('click', event => {
+          if (item.classList.contains('closed')) {
+            item.classList.add('open');
+            item.classList.remove('closed');
+          } else {
+            item.classList.add('closed');
+            item.classList.remove('open');
+          }
+        })
+      })
+    }
+
     document.addEventListener("DOMContentLoaded", function(event) { 
       printYear();
 
@@ -117,6 +143,11 @@
 
       if (currentPage === 'offerings') {
         convertCaptionsIntoLinks();
+      }
+
+      var isAccordion = checkForAccordion();
+      if (isAccordion) {
+        activateAccordion();
       }
     });
     
