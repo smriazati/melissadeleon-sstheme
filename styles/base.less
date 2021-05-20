@@ -925,16 +925,22 @@ body.the-edit {
 }
 
 // the edit individual item
-
+body.the-edit .blog-item-image {
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
 body.the-edit  .blog-item {
   width: 100%;
-  grid-column: span 3;
+  grid-column-start: 2;
+  grid-column-end: 4;
   article,
   .blog-item-pagination {
     max-width: 65ch;
     margin: 0 auto;
   }
   article {
+
     a {
       color: @night;
     }

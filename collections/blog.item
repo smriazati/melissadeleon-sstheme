@@ -1,17 +1,16 @@
+<!-- main image (thumbnail) -->
+{.main-image?}
+  <div class="blog-item-image">
+    <img {@|image-meta} />
+  </div>
+{.end}
+
 <div class="blog-item">
 {.section item}
 
   <!--WRAPPER-->
   <article id="post-{id}" class="{@|item-classes}" data-item-id="{id}">
 
-    <!-- main image (thumbnail) -->
-    {.main-image?}
-      <a href="{fullUrl}" class="main-image content-fill">
-        <div class="image-border"></div>
-        <img {@|image-meta} />
-      </a>
-    {.end}
-    
     <!--POST TILE-->
     <h1 class="title" data-content-field="title">
       {.passthrough?}
