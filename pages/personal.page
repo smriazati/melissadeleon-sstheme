@@ -18,7 +18,7 @@
         <p>The MdS Personal Style Process includes three comprehensive phases that will help us connect you to your most authentic, powerful style. We honor the investment and vulnerability it takes to invite us into your views of self and style, and we strive to make the process transformative, fun, and safe.</p>
 
         <div class="accordion">
-            <div class="accordion-item">
+            <div class="accordion-item closed">
                 <div class="accordion-headline">
                     <h3>Inspiration</h3>
                 </div>
@@ -26,7 +26,7 @@
                     <p></p>
                 </div>
             </div>
-             <div class="accordion-item">
+             <div class="accordion-item closed">
                 <div class="accordion-headline">
                     <h3>Lifestyle</h3>
                 </div>
@@ -34,7 +34,7 @@
                     <p></p>
                 </div>
             </div>
-             <div class="accordion-item">
+             <div class="accordion-item closed">
                 <div class="accordion-headline">
                     <h3>Profile</h3>
                 </div>
@@ -141,44 +141,44 @@
 </div>
 
 <div class="accordion ala-carte">
-    <div class="accordion-item">
+    <div class="accordion-item closed">
         <div class="accordion-headline">
             <h3>Bridal + Wedding Styling</h3>
         </div>
         <div class="accordion-content">
-            <p></p>
+            <p>Step confidently into a moment you will remember forever. Melissa will be your guide to discovering your true wedding style vision. From selecting wedding colors and outfitting the entire bridal party, to helping you choose the perfect bridal gown and accessories for your day, she expertly takes into consideration your personality and story, event season, venue, florals, skin/hair tones and body type. A la carte outfitting services are available for engagement photos, wedding showers, bachelorette events, rehearsal dinner, and honeymoon. <em>Limited Bridal + Wedding Styling spots available for 2021-2022.</em></p>
         </div>
     </div>
-    <div class="accordion-item">
+    <div class="accordion-item closed">
         <div class="accordion-headline">
-            <h3>Bridal + Wedding Styling</h3>
+            <h3>Special Occasion Styling</h3>
         </div>
         <div class="accordion-content">
-            <p></p>
+            <p>We will help you find the perfect outfit for that special occasion coming up, whether that’s a black tie event, party, graduation, special dinner or date night. We will help you consider options and choose the best outfit, paired with shoes and accessories, that makes you feel like your truest, most powerful self.</p>
         </div>
     </div>
-    <div class="accordion-item">
+    <div class="accordion-item closed">
         <div class="accordion-headline">
-            <h3>Makeup Consultation</h3>
+            <h3>Makeup Consultation with Mena Garcia</h3>
         </div>
         <div class="accordion-content">
-            <p></p>
+            <p>Much like our styling consultation, <a href="https://www.menagarciabeauty.com/" target="_blank">Mena</a> will assess your current makeup routine, lifestyle, skin type, tones, and budget, and teach you how to confidently apply your makeup going forward. She will also provide product recommendations specific to your skin type, tones, and style.</p>
         </div>
     </div>
-    <div class="accordion-item">
+    <div class="accordion-item closed">
         <div class="accordion-headline">
             <h3>Family + Lifestyle Photoshoots</h3>
         </div>
         <div class="accordion-content">
-            <p></p>
+            <p>Allow us to help make your next personal photoshoot easy. We will develop and source cohesive outfits that are just right for your venue, vision, and style so you can relax and enjoy the memories, and images, for years to come.</p>
         </div>
     </div>
-    <div class="accordion-item">
+    <div class="accordion-item closed">
         <div class="accordion-headline">
             <h3>Mds Styling Party</h3>
         </div>
         <div class="accordion-content">
-            <p></p>
+            <p>Enjoy an evening with friends learning from Melissa and shopping outfits surrounding a specific style theme, such as holiday outfits, day-to-night styling, or working from home. <em>Minimum 8 attendees required.</em></p>
         </div>
     </div>
 </div>
