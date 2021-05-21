@@ -57,21 +57,17 @@
     </div>
 </div>
 
-<squarespace:query collection="commercialGallery" limit="10">
 
-  <div>
+<squarespace:query collection="commercialGallery"  limit="5">
+
+  <div class="featured-wrapper">
     {.repeated section items}
-
-        {.main-image?}
-        <a href="{fullUrl}" class="main-image content-fill">
-            <div class="image-border"></div>
-            <img {@|image-meta} />
-        </a>
-        {.end}
-
+    <div class="featured-post">
+      {.main-image?}<img {@|image-meta} />{.end}
+    </div>
     {.end}
-
   </div>
+
 
 </squarespace:query>
 
