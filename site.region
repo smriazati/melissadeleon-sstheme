@@ -148,6 +148,23 @@
       }
     }
 
+    function homePageCustomStyles() {
+
+      {#  CARDS  }
+      const cards = document.querySelectorAll('.card');
+      cards.forEach( card => {
+        const caption = card.querySelector('figcaption .image-caption p');
+        var captionText = caption.textContent;
+        const firstTwoWords = captionText.split(' ').slice(0,2).join(' ');
+      
+        const emTag = document.createElement('em');
+        emTag.innerHTML = firstTwoWords;
+
+        caption.innerHTML = emTag.outerHTML + captionText.replace(firstTwoWords.toString(), '');
+      })
+
+    }
+
     document.addEventListener("DOMContentLoaded", function(event) { 
       printYear();
 
@@ -167,6 +184,11 @@
       if (isFeaturedItem) {
         document.querySelector('body').classList.add('featured-post')
       }
+
+      if (currentPage === 'home') {
+        homePageCustomStyles();
+      }
+
     });
     
   </script>
