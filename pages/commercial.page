@@ -58,7 +58,7 @@
 </div>
 
 
-<squarespace:query collection="commercialGallery"  limit="5">
+<squarespace:query collection="commercial-gallery"  limit="5">
 
   <div class="featured-wrapper">
     {.repeated section items}
