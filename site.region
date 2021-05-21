@@ -193,7 +193,11 @@
       const logo = header.querySelector('.site-logo');
       const navItems = header.querySelectorAll('.site-navigation-item');
       const hero = document.querySelector('.hero')
-      logo.style.width = '430px';
+
+      gsap.set(logo, {
+        'width': '430px'
+      })
+
       gsap.to(logo, {
           scrollTrigger: {
             trigger: hero,
@@ -230,6 +234,21 @@
             'margin-bottom': '15px',
         });
       });
+    }
+
+    function ctaMarquee() {
+      const ref = document.querySelectorAll('main .cta-text p');
+      if (ref) {
+        gsap.set( ref, {
+          x: '-75vw'
+        })
+        gsap.to( ref, {
+          x: '75vw',
+          duration: 25,
+          ease: "slow (0.7, 0.7, true)",
+          repeat: '-1'
+        })
+      }
     }
 
     function addMarginForFixedHeader() {
@@ -273,6 +292,7 @@
         homePageCustomStyles();
         shrinkLogoOnScroll();
         homePageCards();
+        ctaMarquee();
       }
 
     });
