@@ -38,6 +38,7 @@
                     <p>With your vision and goals in mind, we find and collect the perfect options to choose from for shoot day.</p>
                 </div>
             </div>
+            
              <div class="accordion-item closed">
                 <div class="accordion-headline">
                     <h3>Day-of-Styling</h3>
@@ -58,7 +59,7 @@
 </div>
 
 
-<squarespace:query collection="commercial-gallery"  limit="5">
+<squarespace:query collection="commercial-gallery"  limit="12">
 
   <div class="featured-wrapper">
     {.repeated section items}
