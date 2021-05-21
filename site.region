@@ -178,7 +178,6 @@
 
   function showDescriptionAsOverlay() {
     const summary = document.querySelector('.summary-block-collection-type-commercialGallery');
-    {#  console.log(summary);  }
     const thumbs = summary.querySelectorAll('.summary-thumbnail-container');
     thumbs.forEach( thumb => {
       const description = thumb.dataset.description;
@@ -203,9 +202,7 @@
           },
           'width': '220px'
       });
-
-
-        navItems.forEach(navItem => {
+      navItems.forEach(navItem => {
           gsap.to(navItem, {
             scrollTrigger: {
               trigger: hero,
@@ -216,19 +213,22 @@
             'padding-bottom': '15px'
         });
       });
+    }
 
-
-      gsap.to(logo, {
-          scrollTrigger: {
-            trigger: hero,
-            start: "bottom top", 
-            end: "+=300",
-          },
-          'width': '220px'
+    function homePageCards() {
+      const cards = header.querySelectorAll('main .cards');
+      cards.forEach(card => {
+          gsap.to(card, {
+            scrollTrigger: {
+              trigger: hero,
+              start: "top bottom", 
+              end: "+=500",
+            },
+            y: '100vh'
+        });
       });
     }
 
-    
     function addMarginForFixedHeader() {
       const header = document.querySelector('.site-header');
       if (header) {
@@ -269,6 +269,7 @@
       if (currentPage === 'home') {
         homePageCustomStyles();
         shrinkLogoOnScroll();
+        homePageCards();
       }
 
     });
