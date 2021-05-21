@@ -216,15 +216,18 @@
     }
 
     function homePageCards() {
-      const cards = header.querySelectorAll('main .cards');
-      cards.forEach(card => {
+      const trigger = document.querySelector('main .submark-headline');
+      const refs = document.querySelectorAll('main .card');
+      console.log(refs);
+      refs.forEach(card => {
           gsap.to(card, {
             scrollTrigger: {
-              trigger: hero,
-              start: "top bottom", 
-              end: "+=500",
+              trigger: trigger,
+              start: "top 10%", 
+              scrub: .3
             },
-            y: '100vh'
+            y: '-50vh',
+            'margin-bottom': '15px',
         });
       });
     }
