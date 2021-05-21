@@ -1092,79 +1092,73 @@ body.press {
 // commercial
 
 body.commercial {
-  main {
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: max-content;
-      > * {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;
-      }
-      .image-wrapper {
-        img {
-          min-height: 100%;
-        }
-      }
-      .text-wrapper {
-        background: rgba(0, 0, 0, .25);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        * {
-          color: @cream;
-        }
-        h1 {
-          .freightNeoPro;
-          font-size: 48px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 58px;
-          letter-spacing: 0em;
-          em {
-            .freightNeoProItal;
-            font-style: italic;
-          }
-        }
-        h2 {
-          .h3;
-        }
-      }
+  main > div > .sqs-row > div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: .5fr 540px 540px .5fr;
+    grid-auto-flow: dense;
+    > * {
+      grid-column: ~"1 / 5";
+      width: 100%;
+      max-width: 100%;
     }
 
-    .intro-row {
-      display: flex;
-      max-width: 1080px;
-      margin: 0 auto;
-      margin-top: 100px;
-      > * {
-        flex: 50%;
-      }
-      > *:first-child {
-        padding-right: 80px;
-        .text-wrapper {
-          p {
-            .p;
-            margin-top: 10px;
-          }
-        }
-      }
-      .accordion {
-        margin-top: 15px;
-      }
+    .hero,
+    .hero-overlay {
+      grid-row: ~"1 / 2";
     }
 
-    .cta-row {
-      margin-top: 100px;
+    .hero-overlay {
+      background: rgba(0, 0, 0, .25);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      * {
+        color: @cream;
+      }
+      h2 {
+        .freightNeoPro;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 58px;
+        letter-spacing: 0em;
+        em {
+          .freightNeoProItal;
+          font-style: italic;
+        }
+      }
+      h3 {
+        .h3;
+      }
     }
+    
+    .intro-text, .sqs-block.accordion, .commercial-gallery {
+      margin-top: 100px;
+    }
+    .intro-text {
+      grid-column: ~"2 / 3";
+      padding-right: 80px;
+      p {
+        .p;
+        margin-top: 10px;
+      }
+    }
+
+    .sqs-block.accordion {
+      grid-column: ~"3 / 4";
+      padding-top: 15px;
+    }
+
+  .cta-button {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+}
 }
 
 button:not(.flat) {
