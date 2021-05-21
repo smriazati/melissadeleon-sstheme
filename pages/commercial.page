@@ -57,8 +57,25 @@
     </div>
 </div>
 
+<squarespace:query collection="commercialGallery" limit="10">
 
+  <div>
+    {.repeated section items}
 
+        {.main-image?}
+        <a href="{fullUrl}" class="main-image content-fill">
+            <div class="image-border"></div>
+            <img {@|image-meta} />
+        </a>
+        {.end}
+
+    {.end}
+
+  </div>
+
+</squarespace:query>
+
+{#  
 <div class="masonry-gallery">
     <div class="gallery-item">
         <figure>
@@ -135,4 +152,4 @@
             <figcaption></figcaption>
         </figure>
     </div>
-</div>
+</div>  }
