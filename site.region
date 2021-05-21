@@ -78,6 +78,9 @@
     <!-- other scripts, and footer code injection -->
     {squarespace-footers}
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/CSSRulePlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
   <script>
     const ssData = {@|json};
     // ssData.collection.urlId
@@ -163,6 +166,66 @@
         caption.innerHTML = emTag.outerHTML + captionText.replace(firstTwoWords.toString(), '');
       })
 
+      {#  Shrink Logo On Scroll  }
+
+    }
+
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    ScrollTrigger.defaults({
+      toggleActions: "play play resume reset"
+    });
+
+    function shrinkLogoOnScroll() {
+      const header = document.querySelector('.site-header');
+      const logo = header.querySelector('.site-logo');
+      const navItems = header.querySelectorAll('.site-navigation-item');
+      const hero = document.querySelector('.hero')
+      logo.style.width = '430px';
+      gsap.to(logo, {
+          scrollTrigger: {
+            trigger: hero,
+            start: "bottom top", 
+            end: "+=300",
+          },
+          'width': '220px'
+      });
+
+
+        navItems.forEach(navItem => {
+          gsap.to(navItem, {
+            scrollTrigger: {
+              trigger: hero,
+              start: "bottom top", 
+              end: "+=300",
+            },
+            'padding-top': '15px',
+            'padding-bottom': '15px'
+        });
+      });
+
+
+      gsap.to(logo, {
+          scrollTrigger: {
+            trigger: hero,
+            start: "bottom top", 
+            end: "+=300",
+          },
+          'width': '220px'
+      });
+    }
+
+    
+    function addMarginForFixedHeader() {
+      const header = document.querySelector('.site-header');
+      if (header) {
+        const hW = header.offsetHeight;
+        console.log(header, hW);
+        const main = header.nextElementSibling;
+        main.style.marginTop = hW + 'px';
+        console.log(main.style.marginTop);
+      }
     }
 
     document.addEventListener("DOMContentLoaded", function(event) { 
@@ -175,6 +238,8 @@
         convertCaptionsIntoLinks();
       }
 
+
+      addMarginForFixedHeader();
       var isAccordion = checkForAccordion();
       if (isAccordion) {
         activateAccordion();
@@ -187,6 +252,7 @@
 
       if (currentPage === 'home') {
         homePageCustomStyles();
+        shrinkLogoOnScroll();
       }
 
     });
