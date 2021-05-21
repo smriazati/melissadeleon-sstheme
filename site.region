@@ -221,11 +221,9 @@
       const header = document.querySelector('.site-header');
       if (header) {
         const hW = header.offsetHeight;
-        console.log(header, hW);
         const main = header.nextElementSibling;
         main.style.marginTop = hW + 'px';
-        console.log(main.style.marginTop);
-      }
+=      }
     }
 
     document.addEventListener("DOMContentLoaded", function(event) { 
@@ -240,6 +238,7 @@
 
 
       addMarginForFixedHeader();
+
       var isAccordion = checkForAccordion();
       if (isAccordion) {
         activateAccordion();
