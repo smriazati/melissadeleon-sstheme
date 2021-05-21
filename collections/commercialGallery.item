@@ -1,0 +1,10 @@
+{.section item}
+
+    {.main-image?}
+        <div class="image-wrapper">
+            <img {@|image-meta} />
+        </div>
+    {.end}
+
+{.end}
+

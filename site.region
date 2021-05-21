@@ -223,7 +223,7 @@
         const hW = header.offsetHeight;
         const main = header.nextElementSibling;
         main.style.marginTop = hW + 'px';
-=      }
+      }
     }
 
     document.addEventListener("DOMContentLoaded", function(event) { 

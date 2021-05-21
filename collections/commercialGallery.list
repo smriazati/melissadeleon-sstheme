@@ -1,0 +1,12 @@
+
+<!-- item loop -->
+{.repeated section items}
+
+    {.main-image?}
+      <a href="{fullUrl}" class="main-image content-fill">
+        <div class="image-border"></div>
+        <img {@|image-meta} />
+      </a>
+    {.end}
+
+{.end}
