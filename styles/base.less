@@ -609,6 +609,7 @@ body:not(.homepage) {
     .site-navigation-item:hover {
       a {
         border: 1px solid @night;
+        font-style: normal;
       }
     }
   }
@@ -1134,7 +1135,7 @@ body.commercial {
       }
     }
     
-    .intro-text, .sqs-block.accordion, .commercial-gallery {
+    .intro-text, .accordion-wrapper, .commercial-gallery {
       margin-top: 100px;
     }
     .intro-text {
@@ -1146,7 +1147,7 @@ body.commercial {
       }
     }
 
-    .sqs-block.accordion {
+    .accordion-wrapper {
       grid-column: ~"3 / 4";
       padding-top: 15px;
     }
@@ -1157,6 +1158,47 @@ body.commercial {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    button a {
+      transition: .3s ease-out all;
+    }
+    button a:hover {
+      background: @cream;
+      color: @night;
+    }
+  }
+
+  .commercial-gallery {
+    .summary-thumbnail-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      > * {
+        grid-column: ~"1 / 2";
+        grid-row: ~"1 / 2";
+      }
+      .thumbnail-description {
+        z-index: 9;
+        position: relative;
+        background: rgba(189, 100, 92, .9);
+        height: 100%;
+        width: 100%;
+        padding: 17px;
+        opacity: 0;
+        transition: .5s ease-out all;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        * {
+          color: @night;
+        }
+      }
+
+      &:hover {
+        .thumbnail-description {
+          opacity: 1;
+        }
+      }
+    }
   }
 }
 }

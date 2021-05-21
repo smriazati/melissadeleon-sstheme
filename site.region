@@ -123,9 +123,8 @@
     }
 
     function activateAccordion() {
-      const accordions = document.querySelectorAll('.accordion');
+      const accordions = document.querySelectorAll('main .accordion');
       accordions.forEach(accordion => {
-
         const items = accordion.querySelectorAll('.accordion-item');
         items.forEach(item => {
           item.addEventListener('click', event => {
@@ -176,6 +175,19 @@
     ScrollTrigger.defaults({
       toggleActions: "play play resume reset"
     });
+
+  function showDescriptionAsOverlay() {
+    const summary = document.querySelector('.summary-block-collection-type-commercialGallery');
+    {#  console.log(summary);  }
+    const thumbs = summary.querySelectorAll('.summary-thumbnail-container');
+    thumbs.forEach( thumb => {
+      const description = thumb.dataset.description;
+      const newDiv = document.createElement('div');
+      newDiv.innerHTML = description;
+      newDiv.classList.add('thumbnail-description')
+      thumb.insertBefore(newDiv, thumb.firstChild);
+    })    
+  }
 
     function shrinkLogoOnScroll() {
       const header = document.querySelector('.site-header');
@@ -239,9 +251,14 @@
 
       addMarginForFixedHeader();
 
-      var isAccordion = checkForAccordion();
-      if (isAccordion) {
+      var hasAccordion = checkForAccordion();
+      if (hasAccordion) {
         activateAccordion();
+      }
+
+      const summary = document.querySelector('.summary-block-collection-type-commercialGallery');
+      if (summary) {
+        showDescriptionAsOverlay();
       }
 
       var isFeaturedItem = checkForFeaturedSinglePage();
