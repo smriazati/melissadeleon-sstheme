@@ -309,7 +309,7 @@
         gsap.to(background, {
             scrollTrigger: {
               trigger: container,
-              start: "top-=200px top", 
+              start: "top-=80px top", 
               endTrigger: endTrigger,
               end: 'top bottom',
               scrub: 1.1
