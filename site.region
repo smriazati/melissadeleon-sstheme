@@ -310,7 +310,6 @@
             scrollTrigger: {
               trigger: container,
               start: "top-=50% top", 
-              markers: true,
               endTrigger: endTrigger,
               end: 'top bottom',
               scrub: 1.1
