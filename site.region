@@ -170,11 +170,10 @@
     }
 
 
-    gsap.registerPlugin(ScrollTrigger);
-
-    ScrollTrigger.defaults({
-      toggleActions: "play play resume reset"
-    });
+  gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.defaults({
+    toggleActions: "play play resume reset"
+  });
 
   function showDescriptionAsOverlay() {
     const summary = document.querySelector('.summary-block-collection-type-commercialGallery');
@@ -222,7 +221,6 @@
     function homePageCards() {
       const trigger = document.querySelector('main .submark-headline');
       const refs = document.querySelectorAll('main .card');
-      console.log(refs);
       refs.forEach(card => {
           gsap.to(card, {
             scrollTrigger: {
@@ -237,17 +235,88 @@
     }
 
     function ctaMarquee() {
-      const ref = document.querySelectorAll('main .cta-text p');
-      if (ref) {
-        gsap.set( ref, {
-          x: '-75vw'
+
+      const s1 = document.querySelector('main .cta-text p');
+      s1.style.display = 'inline';
+      const sliderWidth = s1.offsetWidth;
+      const sliderHeight = s1.offsetHeight;
+      const parent = s1.parentElement;
+      const parentContainer = parent.parentElement;
+      parent.classList.add('animated-slider-container')
+      parentContainer.classList.add('animated-slider-container-wrapper')
+      parentContainer.style.height = sliderHeight + 20 + 'px';
+      const containerWidth = parentContainer.offsetWidth;
+      s1.remove();
+
+      function createSlider() {
+        console.log('making a slider')
+        let newSlider = document.createElement('p');
+        newSlider.innerHTML = s1.innerHTML;
+        parent.append(newSlider);
+        addAnimation(newSlider);
+      }    
+
+      function killSlider(slider) {
+        if (slider) {
+          slider.remove();
+        }
+      }    
+
+      const duration = 12;
+      const delay = duration / 2;
+      function addAnimation(slider) {
+        if (gsap) {
+          let madeNew = false;
+          gsap.set(slider, {
+            x: (sliderWidth * -1) + 'px',
+          })
+          var anim = gsap.to(slider, {
+            x: containerWidth + 'px',
+            duration: duration,
+            ease: 'linear',
+            onUpdate:  () => {
+              if (anim.time() > delay) {
+                if (!madeNew) {
+                  createSlider();
+                  madeNew = true;
+                } 
+              }
+            },
+            onComplete:() => killSlider(slider)
+          })
+        }
+      }
+
+      createSlider();
+
+    }
+
+
+    function extendPhotoBackground() {
+      const container = document.querySelector('.bio-image');
+      const background = document.createElement('div');
+      const endTrigger = document.querySelector('.site-footer');
+      let figure;
+      if (container) {
+        figure = container.querySelector('figure');
+        background.classList.add('background-extending');
+        figure.append(background);
+      }
+      if (gsap) {
+        gsap.set(background, {
+          'height': '0%'
         })
-        gsap.to( ref, {
-          x: '75vw',
-          duration: 25,
-          ease: "slow (0.7, 0.7, true)",
-          repeat: '-1'
-        })
+        gsap.to(background, {
+            scrollTrigger: {
+              trigger: container,
+              start: "top-=50% top", 
+              markers: true,
+              endTrigger: endTrigger,
+              end: 'top bottom',
+              scrub: 1.1
+            },
+            'height': '+=100%'
+        });
       }
     }
 
@@ -293,6 +362,7 @@
         shrinkLogoOnScroll();
         homePageCards();
         ctaMarquee();
+        extendPhotoBackground();
       }
 
     });

@@ -444,14 +444,18 @@ body.homepage {
     figure {
       position: relative;
     }
-    figure:before {
-      content: '';
+    figure .image-block-wrapper {
+      position: relative;
+      z-index: 10;
+    }
+    figure .background-extending {
       position: absolute;
       top: 20px;
       left: -20px;
       background: @clay;
       width: 100%;
-      height: 100%;
+      height: unset;
+      z-index: 0;
     }
   }
 
@@ -630,6 +634,8 @@ body:not(.homepage) {
 /* footer */
 
 .site-footer {
+  z-index: 101;
+  position: relative;
   width: 100%;
   background: @cream;
   display: grid;
@@ -1621,6 +1627,22 @@ body.clients {
         margin: 0 auto;
         margin-top: 30px;
       }
+    }
+  }
+}
+
+// 
+
+.animated-slider-container-wrapper {
+  .animated-slider-container {
+    position: absolute;
+    p {
+      margin-top: 0;
+      position: absolute;
+      top: 0;
+      display: block;
+      white-space: nowrap !important;
+      text-align: right;
     }
   }
 }
