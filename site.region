@@ -18,7 +18,7 @@
         
         <div class="site-navigation-wrapper"> 
           <squarespace:navigation navigationId="siteNav" template="site-navigation" />
-          <div class="mobile-menu-item client-portal-button">
+          <div id="mobile-nav-extras" class="mobile-menu-item client-portal-button">
             <button class="flat"><a href="/clients">Client Portal</a></button>
           </div>
 
@@ -195,7 +195,7 @@
       }
     }
 
-    function homePageCustomStyles() {
+    function emFirstWordsOfCardCaption() {
 
       {#  CARDS  }
       const cards = document.querySelectorAll('.card');
@@ -277,7 +277,7 @@
       }
     }
 
-    function homePageCards() {
+    function setCardAnimation() {
       const trigger = document.querySelector('main .submark-headline');
       const refs = document.querySelectorAll('main .card');
       refs.forEach(card => {
@@ -293,22 +293,21 @@
       });
     }
 
-    function ctaMarquee() {
+    function setCTAMarqueeAnimation() {
 
       const s1 = document.querySelector('main .cta-text p');
       s1.style.display = 'inline';
-      const sliderWidth = s1.offsetWidth;
-      const sliderHeight = s1.offsetHeight;
+      let sliderWidth = s1.offsetWidth;
+      let sliderHeight = s1.offsetHeight;
       const parent = s1.parentElement;
       const parentContainer = parent.parentElement;
       parent.classList.add('animated-slider-container')
       parentContainer.classList.add('animated-slider-container-wrapper')
-      parentContainer.style.height = sliderHeight + 20 + 'px';
       const containerWidth = parentContainer.offsetWidth;
       s1.remove();
 
       function createSlider() {
-        console.log('making a slider')
+        {#  console.log('making a slider')  }
         let newSlider = document.createElement('p');
         newSlider.innerHTML = s1.innerHTML;
         parent.append(newSlider);
@@ -321,8 +320,23 @@
         }
       }    
 
-      const duration = 12;
-      const delay = duration / 2;
+      if (window.innerWidth < 768) {
+        sliderWidth = window.innerWidth + 300
+        parentContainer.style.height = sliderHeight + 'px';
+
+      } else {
+        parentContainer.style.height = sliderHeight + 20 + 'px';
+      }
+
+      
+      let duration = 12;
+      
+      if (window.innerWidth < 768) {
+        sliderWidth = window.innerWidth + 300
+        duration = 6;
+      }
+
+      let delay = duration / 2;
       function addAnimation(slider) {
         if (gsap) {
           let madeNew = false;
@@ -351,7 +365,7 @@
     }
 
 
-    function extendPhotoBackground() {
+    function setPhotoBackgroundAnimation() {
       const container = document.querySelector('.bio-image');
       const background = document.createElement('div');
       const endTrigger = document.querySelector('.site-footer');
@@ -361,7 +375,7 @@
         background.classList.add('background-extending');
         figure.append(background);
       }
-      if (gsap) {
+      if (gsap && window.innerWidth > 768) {
         gsap.set(background, {
           'height': '0%'
         })
@@ -379,11 +393,11 @@
     }
 
 
-    function extendPhotoBackgroundPersonalOfferings() {
+    function setPhotoBackgroundAnimationPersonalOfferings() {
       const container = document.querySelector('.intro-image-wrapper');
       const background = container.querySelector('.clay-bg')
       const endTrigger = document.querySelector('.cta-banner');
-      if (gsap) {
+      if (gsap && window.innerWidth > 768) {
         gsap.set(background, {
           'height': '0%'
         })
@@ -435,31 +449,83 @@
 
     }
     
-    function pinPersonalOfferingPhasesOnScroll() {
+    function setPhasesAnimation() {
       if (gsap) {
         let sections = gsap.utils.toArray(".phase-item");
-
-
         sections.forEach((section, i) => {
-          gsap.set(section, {
-            autoAlpha: 0,
-            x: -100
-          })
-          ScrollTrigger.create({
-            trigger: section,
-            start: "top 10%", 
-            pin: true, 
-            pinSpacing: true,
-            scrub: 0.9,
-            onToggle: self => setAnimation(self, section)
-          });  
+          if (window.innerWidth > 768) {
+            gsap.set(section, {
+              autoAlpha: 0,
+              x: -100
+            })
+            ScrollTrigger.create({
+              trigger: section,
+              start: "top 10%", 
+              pin: true, 
+              pinSpacing: true,
+              scrub: 0.9,
+              onToggle: self => setAnimation(self, section)
+            });
+          } else {
+            gsap.set(section, {
+              autoAlpha: 0,
+              x: -100
+            })
+            gsap.to(section, {
+              autoAlpha: 1,
+              x: 0,
+              scrollTrigger: {
+                trigger: section,
+                start: "top bottom", 
+                end: "+=300",
+                scrub: true
+              }
+            })
+          }
         })
       }
     }
 
+let resizeTimer;
+window.addEventListener('resize', function(e) {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+
+      const currentPage = ssData.collection.urlId;
+      addMarginForFixedHeader();
+      if (currentPage === 'home') {
+        shrinkLogoOnScroll();
+        setCardAnimation();
+        setCTAMarqueeAnimation();
+        setPhotoBackgroundAnimation();
+      }
+
+      if (currentPage === 'personal') {
+        setPhotoBackgroundAnimationPersonalOfferings();
+        setPhasesAnimation();
+      }
+              
+    }, 250);
+});
+
+function addExtrasToMobileMenu() {
+  const header = document.querySelector('.site-header');
+  const nav = header.querySelector('.site-navigation');
+  const extras = header.querySelector('#mobile-nav-extras');
+
+  let newExtras = document.createElement('div');
+  newExtras.innerHTML = extras.innerHTML;
+  newExtras.classList.add('mobile-menu-item');
+  newExtras.classList.add('client-portal-button');
+
+  nav.append(newExtras);
+  extras.remove();
+
+}
     document.addEventListener("DOMContentLoaded", function(event) { 
       printYear();
 
+      addExtrasToMobileMenu();
       const button = document.querySelector('.mobile-menu-toggle');
       button.addEventListener("click", toggleMenu);
 
@@ -488,16 +554,16 @@
       }
 
       if (currentPage === 'home') {
-        homePageCustomStyles();
+        emFirstWordsOfCardCaption();
         shrinkLogoOnScroll();
-        homePageCards();
-        ctaMarquee();
-        extendPhotoBackground();
+        setCardAnimation();
+        setCTAMarqueeAnimation();
+        setPhotoBackgroundAnimation();
       }
 
       if (currentPage === 'personal') {
-        extendPhotoBackgroundPersonalOfferings();
-        pinPersonalOfferingPhasesOnScroll();
+        setPhotoBackgroundAnimationPersonalOfferings();
+        setPhasesAnimation();
       }
 
     });
