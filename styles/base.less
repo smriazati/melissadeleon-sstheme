@@ -659,7 +659,6 @@ body:not(.homepage) {
 }
 @media (max-width: @sm-bp) {
   .site-header {
-    position: relative;
     .site-logo {
       position: relative;
       flex: 100%;
@@ -692,6 +691,7 @@ body:not(.homepage) {
 
       .site-logo {
         width: 45%;
+        left: 0;
       }
 
       .mobile-menu-toggle {
@@ -718,6 +718,9 @@ body:not(.homepage) {
         justify-content: center;
         li {
           padding: 0 10px;
+          img {
+            max-width: 20px;
+          }
         }
       }
     }
