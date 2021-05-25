@@ -216,6 +216,7 @@
 
 
   gsap.registerPlugin(ScrollTrigger);
+
   ScrollTrigger.defaults({
     toggleActions: "play play resume reset"
   });
@@ -417,6 +418,44 @@
       }
     }
 
+    function setAnimation(self, section) {
+
+      console.log("toggled, isActive:", self.isActive, section)
+
+      if (self.isActive) {
+        gsap.to(section, {
+          autoAlpha: 1,
+          x: 0
+        })
+      } else {
+        gsap.to(section, {
+          autoAlpha: 0,
+        })
+      }
+
+    }
+    
+    function pinPersonalOfferingPhasesOnScroll() {
+      if (gsap) {
+        let sections = gsap.utils.toArray(".phase-item");
+
+
+        sections.forEach((section, i) => {
+          gsap.set(section, {
+            autoAlpha: 0,
+            x: -100
+          })
+          ScrollTrigger.create({
+            trigger: section,
+            start: "top 10%", 
+            pin: true, 
+            pinSpacing: true,
+            scrub: 0.9,
+            onToggle: self => setAnimation(self, section)
+          });  
+        })
+      }
+    }
 
     document.addEventListener("DOMContentLoaded", function(event) { 
       printYear();
@@ -458,6 +497,7 @@
 
       if (currentPage === 'personal') {
         extendPhotoBackgroundPersonalOfferings();
+        pinPersonalOfferingPhasesOnScroll();
       }
 
     });
