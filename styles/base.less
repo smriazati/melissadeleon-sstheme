@@ -967,6 +967,12 @@ body.offerings {
   main > div > .sqs-row {
     display: flex;
     flex-direction: row;
+    @media (max-width: @bp-sm) {
+      flex-direction: column;
+      .sqs-block:last-child {
+        padding: 0 !important;
+      }
+    }
     .sqs-col-6 {
       width: 100%;
     }
