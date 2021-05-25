@@ -969,7 +969,9 @@ body.offerings {
     flex-direction: row;
     @media (max-width: @sm-bp) {
       flex-direction: column;
-      
+      .sqs-block:last-child {
+        padding: 0 !important;
+      }
     }
     .sqs-col-6 {
       width: 100%;
