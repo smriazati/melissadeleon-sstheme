@@ -14,7 +14,22 @@
 
       <header class="site-header">
         <!-- site navigation -->
-        <squarespace:navigation navigationId="siteNav" template="site-navigation" />
+        <div class="mobile-menu-item mobile-menu-toggle closed"><img src="/assets/icons/menu.png" alt="three thin parallel vertical lines to open the mobile navigation menu"/></div>
+        
+        <div class="site-navigation-wrapper"> 
+          <squarespace:navigation navigationId="siteNav" template="site-navigation" />
+          <div class="mobile-menu-item client-portal-button">
+            <button class="flat"><a href="/clients">Client Portal</a></button>
+          </div>
+
+          <nav class="mobile-menu-item social-nav">
+            <ul>
+              <li><a href="" target="_blank"><img src="/assets/icons/instagram.png" alt="" /></a></li>
+              <li><a href="" target="_blank"><img src="/assets/icons/pinterest.png" alt="" /></a></li>
+              <li><a href="" target="_blank"><img src="/assets/icons/facebook.png" alt="" /></a></li>
+            </ul>
+          </nav>
+        </div>
 
         <!-- site title or logo -->
         {.section website}
@@ -223,29 +238,42 @@
       const navItems = header.querySelectorAll('.site-navigation-item');
       const hero = document.querySelector('.hero')
 
-      gsap.set(logo, {
-        'width': '430px'
-      })
+      const windowWidth = window.innerWidth;
+      let isMobile;
 
-      gsap.to(logo, {
-          scrollTrigger: {
-            trigger: hero,
-            start: "bottom top", 
-            end: "+=300",
-          },
-          'width': '220px'
-      });
-      navItems.forEach(navItem => {
-          gsap.to(navItem, {
+      if (windowWidth < 768) {
+        isMobile = true;
+      } else {
+        isMobile = false;
+      }
+
+      if (isMobile) {
+        console.log('is mobile');
+      } else {
+        gsap.set(logo, {
+          'width': '430px'
+        })
+
+        gsap.to(logo, {
             scrollTrigger: {
               trigger: hero,
               start: "bottom top", 
               end: "+=300",
             },
-            'padding-top': '15px',
-            'padding-bottom': '15px'
+            'width': '220px'
         });
+        navItems.forEach(navItem => {
+            gsap.to(navItem, {
+              scrollTrigger: {
+                trigger: hero,
+                start: "bottom top", 
+                end: "+=300",
+              },
+              'padding-top': '15px',
+              'padding-bottom': '15px'
+          });
       });
+      }
     }
 
     function homePageCards() {
@@ -380,8 +408,21 @@
       }
     }
 
+    function toggleMenu() {
+      const header = document.querySelector('.site-header');
+      if (header.classList.contains('site-header-open')) {
+        header.classList.remove('site-header-open');
+      } else {
+        header.classList.add('site-header-open');
+      }
+    }
+
+
     document.addEventListener("DOMContentLoaded", function(event) { 
       printYear();
+
+      const button = document.querySelector('.mobile-menu-toggle');
+      button.addEventListener("click", toggleMenu);
 
       const currentPage = ssData.collection.urlId;
       document.querySelector('body').classList.add(currentPage)
@@ -389,7 +430,6 @@
       if (currentPage === 'offerings') {
         convertCaptionsIntoLinks();
       }
-
 
       addMarginForFixedHeader();
 
