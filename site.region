@@ -295,48 +295,20 @@
 
     function setCTAMarqueeAnimation() {
 
-      const s1 = document.querySelector('main .cta-text p');
-      s1.style.display = 'inline';
-      let sliderWidth = s1.offsetWidth;
-      let sliderHeight = s1.offsetHeight;
-      const parent = s1.parentElement;
-      const parentContainer = parent.parentElement;
-      parent.classList.add('animated-slider-container')
-      parentContainer.classList.add('animated-slider-container-wrapper')
-      const containerWidth = parentContainer.offsetWidth;
-      s1.remove();
-
       function createSlider() {
         {#  console.log('making a slider')  }
         let newSlider = document.createElement('p');
         newSlider.innerHTML = s1.innerHTML;
         parent.append(newSlider);
         addAnimation(newSlider);
-      }    
+      } 
 
       function killSlider(slider) {
         if (slider) {
           slider.remove();
         }
-      }    
+      }  
 
-      if (window.innerWidth < 768) {
-        sliderWidth = window.innerWidth + 300
-        parentContainer.style.height = sliderHeight + 'px';
-
-      } else {
-        parentContainer.style.height = sliderHeight + 20 + 'px';
-      }
-
-      
-      let duration = 12;
-      
-      if (window.innerWidth < 768) {
-        sliderWidth = window.innerWidth + 300
-        duration = 6;
-      }
-
-      let delay = duration / 2;
       function addAnimation(slider) {
         if (gsap) {
           let madeNew = false;
@@ -360,7 +332,39 @@
         }
       }
 
-      createSlider();
+      const s1 = document.querySelector('main .cta-text p');
+      let parent;
+      let duration = 12;
+      let delay = duration / 2;
+      let slideWidth;
+      let containerWidth;
+
+      if (s1) {
+        s1.style.display = 'inline';
+        if (window.innerWidth < 768) {
+          sliderWidth = window.innerWidth + 300
+        } else {
+          sliderWidth = s1.offsetWidth;
+        }
+        let sliderHeight = s1.offsetHeight;
+        parent = s1.parentElement;
+        const parentContainer = parent.parentElement;
+        parent.classList.add('animated-slider-container')
+        parentContainer.classList.add('animated-slider-container-wrapper')
+          containerWidth = parentContainer.offsetWidth;
+        s1.remove();
+
+        if (window.innerWidth < 768) {
+          sliderWidth = window.innerWidth + 300
+          parentContainer.style.height = sliderHeight + 'px';
+
+        } else {
+          parentContainer.style.height = sliderHeight + 20 + 'px';
+        }
+              
+        createSlider();
+      }
+      
 
     }
 
