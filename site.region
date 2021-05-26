@@ -577,7 +577,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         var ls = sessionStorage.getItem('namespace.visited');
         if (ls == null) {
             setIntroAnimation();
-            {#  localStorage.setItem('namespace.visited', 1)  }
+            sessionStorage.setItem('namespace.visited', 1)
         }
       }
 
