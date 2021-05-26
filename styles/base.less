@@ -225,6 +225,10 @@ body {
 
 .content-container {
   width: 100%;
+  flex: 1;
+  > div {
+    height: 100%;
+  }
 }
 
 
@@ -267,7 +271,11 @@ body.homepage {
       letter-spacing: 0em;
       text-align: left;
     }
-
+    @media (min-width: 1200px) {
+      .image-block-outer-wrapper:not(.image-block-v2) .image-block-wrapper {
+        padding-bottom: 44% !important;
+      }
+    }
     @media (max-width: @sm-bp) {
       .image-block-outer-wrapper:not(.image-block-v2) .image-block-wrapper {
         padding-bottom: 60% !important;
@@ -677,6 +685,10 @@ body.homepage {
   padding-top: 24px;
 }
 
+body.homepage .site-logo {
+  padding-bottom: 24px;
+}
+
 body:not(.homepage) {
   .site-logo {
     @media (min-width: @sm-bp) {
@@ -686,6 +698,9 @@ body:not(.homepage) {
 }
 
 .site-navigation {
+  @media (min-width: @sm-bp) {
+    height: 100%;
+  }
   .site-navigation-list {
     display: flex;
     list-style: none;
@@ -2059,4 +2074,79 @@ img.loaded {
 .accordion-content {
   position: relative;
   z-index: 9;
+}
+
+@keyframes fadeIntroOut {
+  from {
+    opacity: 1;
+    z-index: 999;
+  }
+  to {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+@keyframes slideLogoUp {
+  from {
+    background-position-y: 100%;
+  }
+  to {
+    background-position-y: 0%;
+  }
+}
+
+@keyframes slideLogoDown {
+  from {
+    background-position-y: 0%;
+  }
+  to {
+    background-position-y: 100%;
+  }
+}
+
+
+@introDuration: 1.3s;
+@fadeoutDelay: 1.6s;
+@fadeoutDuration: .5s;
+
+
+.intro-animation-active {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+
+  height: 100vh;
+  width: 100vw;
+  background: white;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3%;
+  padding: 3vh;
+
+  animation: fadeIntroOut @fadeoutDuration @fadeoutDelay forwards;
+
+  &:before,
+  &:after {
+    content: ' ';
+    width: 100%;
+    height: 49%;
+    background-repeat: no-repeat;
+  }
+  &:before {
+    background-image: url("/assets/logo-animation/melissa.png");
+
+    background-position-x: 50%;
+    background-position-y: 100%;
+    animation: slideLogoDown @introDuration ease-in forwards;
+  }
+  &:after {
+    background-image: url("/assets/logo-animation/deleon.png");
+
+    background-position-x: 50%;
+    background-position-y: 0%;
+
+    animation: slideLogoUp @introDuration ease-in forwards;
+  }
 }

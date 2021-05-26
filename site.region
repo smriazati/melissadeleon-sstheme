@@ -10,6 +10,8 @@
   </head>
   <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
 
+    <div class="intro-animation">
+    </div>
     <div class="site-container">
 
       <header class="site-header">
@@ -526,7 +528,15 @@ function addExtrasToMobileMenu() {
   extras.remove();
 
 }
-    document.addEventListener("DOMContentLoaded", function(event) { 
+
+function setIntroAnimation() {
+
+  let animation = document.querySelector('.intro-animation');
+  animation.classList.add('intro-animation-active');
+
+}
+
+document.addEventListener("DOMContentLoaded", function(event) { 
       printYear();
 
       addExtrasToMobileMenu();
@@ -563,6 +573,12 @@ function addExtrasToMobileMenu() {
         setCardAnimation();
         setCTAMarqueeAnimation();
         setPhotoBackgroundAnimation();
+
+        var sessionStorage = sessionStorage.getItem('namespace.visited');
+        if (sessionStorage == null) {
+            setIntroAnimation();
+            sessionStorage.setItem('namespace.visited', 1)
+        }
       }
 
       if (currentPage === 'personal') {
@@ -572,6 +588,9 @@ function addExtrasToMobileMenu() {
 
     });
     
+
+
+
   </script>
   </body>
 </html>
