@@ -574,10 +574,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
         setCTAMarqueeAnimation();
         setPhotoBackgroundAnimation();
 
-        var sessionStorage = sessionStorage.getItem('namespace.visited');
-        if (sessionStorage == null) {
+        var ls = sessionStorage.getItem('namespace.visited');
+        if (ls == null) {
             setIntroAnimation();
-            sessionStorage.setItem('namespace.visited', 1)
+            {#  localStorage.setItem('namespace.visited', 1)  }
         }
       }
 
