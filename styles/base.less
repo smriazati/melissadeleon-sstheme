@@ -1164,6 +1164,68 @@ body.contact {
     background: @clay;
   }
 
+  .instagram-headline {
+    margin: 30px;
+    h3 {
+      .h3;
+    }
+  }
+
+  .sqs-layout > .sqs-row {
+    margin: 0 !important;
+  }
+  .sqs-row {
+    width: 100% !important;
+  }
+
+  .sqs-block-instagram {
+    padding-bottom: 60px;
+  }
+  .sqs-block-instagram .sqs-gallery-block-grid .sqs-gallery {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    .slide {
+      flex: 16%;
+      width: unset;
+      float: none;
+      margin-right: 24px;
+      &:last-child {
+        margin-right: 0;
+      }
+      .margin-wrapper {
+        height: 100%;
+        a.image-slide-anchor {
+          padding-bottom: 0;
+          height: 100%;
+          img {
+            left: 0 !important;
+            top: 0 !important;
+            width: 100% !important;
+            height: unset !important;
+            min-height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      background: @clay;
+
+      img {
+        opacity: 1; 
+        transition: .3s ease all;
+      }
+      &:hover {
+        img {
+          opacity: .3;
+        }
+      }
+    }
+
+    
+  }
   main {
     margin-top: 60px;
   }
@@ -1300,6 +1362,9 @@ body.the-edit {
   }
 
   article {
+    a:hover {
+      font-style: normal;
+    }
     .sqs-row {
       margin: 0;
     }
@@ -1331,7 +1396,7 @@ body.the-edit {
         padding: 12px;
         display: block;
         opacity: 0;
-        transition: .3s ease all;
+        transition: .7s ease all;
         width: 88%;
         height: 88%;
         top: 6%;
@@ -1381,19 +1446,28 @@ body.the-edit {
     &.featured {
       img {
         border: 2px solid @marigold;
+        filter: brightness(90%) grayscale(.3);
+        transition: .5s ease filter;
+      }
+      &:hover {
+        img {
+          filter: brightness(100%) grayscale(0);
+        }
       }
       .image-border {
         padding: 0;
         border: 0;
-        background: rgba(0,0, 0, .3);
+        // background: rgba(255, 255, 255, .3);
+
         width: 100%;
         height: 100%;
-        z-index: 100;
+        z-index: 50;
         position: absolute;
         top: 0;
         left: 0;
         opacity: 1;
       }
+
       p.meta {
         .date {
           display: none;
@@ -1408,6 +1482,16 @@ body.the-edit {
         letter-spacing: 0em;
         text-align: left;
         text-transform: none;
+      }
+      // a, h3.title a {
+      //   color: @cream;
+      // }
+      position: relative;
+      .text-wrapper {
+        position: absolute;
+        bottom: 25px;
+        left: 25px;
+        z-index: 51;
       }
     }
   }
