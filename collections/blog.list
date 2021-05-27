@@ -13,20 +13,22 @@
       </a>
     {.end}
 
-    <p class="meta">
-      {.repeated section categories}
-        <a class="category" href="{collection.fullUrl}?category={@|url-encode}">{@}</a>{.alternates with},
-      {.end}
-      <a href="{fullUrl}" class="date"><time datetime="{addedOn|date %F}">{addedOn|date %B %Y}</time></a>
-    </p>
+    <div class="text-wrapper">
+      <p class="meta">
+        {.repeated section categories}
+          <a class="category" href="{collection.fullUrl}?category={@|url-encode}">{@}</a>{.alternates with},
+        {.end}
+        <a href="{fullUrl}" class="date"><time datetime="{addedOn|date %F}">{addedOn|date %B %Y}</time></a>
+      </p>
 
-    <h3 class="title" data-content-field="title">
-      {.passthrough?}
-        <a href="{sourceUrl}" target="_blank">{title}</a>
-      {.or}
-        <a href="{fullUrl}">{title}</a>
-      {.end}
-    </h3>
+      <h3 class="title" data-content-field="title">
+        {.passthrough?}
+          <a href="{sourceUrl}" target="_blank">{title}</a>
+        {.or}
+          <a href="{fullUrl}">{title}</a>
+        {.end}
+      </h3>
+    </div>
 
   </article>
 
