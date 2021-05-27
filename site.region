@@ -26,9 +26,9 @@
 
           <nav class="mobile-menu-item social-nav">
             <ul>
-              <li><a href="" target="_blank"><img src="/assets/icons/instagram.png" alt="" /></a></li>
-              <li><a href="" target="_blank"><img src="/assets/icons/pinterest.png" alt="" /></a></li>
-              <li><a href="" target="_blank"><img src="/assets/icons/facebook.png" alt="" /></a></li>
+              <li><a href="https://www.instagram.com/melissadeleonstyling/" target="_blank"><img src="/assets/icons/instagram.png" alt="" /></a></li>
+              <li><a href="https://www.pinterest.com/melissadeleonstyling/_created/" target="_blank"><img src="/assets/icons/pinterest.png" alt="" /></a></li>
+              <li><a href="https://www.facebook.com/melissadeleonstyling" target="_blank"><img src="/assets/icons/facebook.png" alt="" /></a></li>
             </ul>
           </nav>
         </div>
@@ -291,7 +291,18 @@
             },
             y: '-50vh',
             'margin-bottom': '15px',
-        });
+          });
+
+        if (window.innerWidth < 768) {
+          gsap.to(card.parentNode, {
+            scrollTrigger: {
+              trigger: trigger,
+              start: "top 10%", 
+              scrub: .3
+            },
+            'margin-bottom': '-300px',
+          });
+        }
       });
     }
 
