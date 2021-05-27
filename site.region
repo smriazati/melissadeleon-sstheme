@@ -536,10 +536,24 @@ function setIntroAnimation() {
 
 }
 
+function detectClientTemplate() {
+  let isClientPage = false;
+  const clientId = document.getElementById('client-template');
+  if (clientId) {
+    isClientPage = true;
+  }
+  console.log(isClientPage);
+  if (isClientPage) {
+    document.querySelector('body').classList.add('client-template');
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function(event) { 
       printYear();
 
       addExtrasToMobileMenu();
+      detectClientTemplate();
+      
       const button = document.querySelector('.mobile-menu-toggle');
       button.addEventListener("click", toggleMenu);
 
