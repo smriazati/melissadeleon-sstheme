@@ -2172,15 +2172,22 @@ body.client-template {
 
     .sqs-row {
       display: flex;
+      @media (max-width: @sm-bp) {
+        flex-direction: column;
+      }
       margin-bottom: 50px;
       > * {
         overflow: hidden;
       }
       > *:first-child {
-        flex: 70%;
+        @media (min-width: @sm-bp) {
+          flex: 70%;
+        }
       }
       > *:last-child {
-        flex: 30%;
+        @media (min-width: @sm-bp) {
+          flex: 30%;
+        }
         padding: 0 10px;
         ul {
           border: 1px solid @night;
@@ -2199,12 +2206,16 @@ body.client-template {
       }
     }
 
+    .client-style-profile-headline,
     .client-style-profile {
-      width: 70%;
-      margin-left: 30%;
+      @media (min-width: @sm-bp) {
+        width: 70%;
+        margin-left: 30%;
+      }
+    }
+    .client-style-profile {
       margin-bottom: 50px;
     }
-
     ul[data-rte-list] li > :first-child::before { 
       display: none;
     }
@@ -2226,12 +2237,15 @@ body.client-template {
 
     .client-recommendations-headline,
     .client-rstyle-widget {
-      width: 60%;
-      margin-right: 40%;
+      @media (min-width: @sm-bp) {
+        width: 60%;
+        margin-right: 40%;
+      }
     }
 
     .client-rstyle-widget {
       margin-top: 30px;
+      margin-bottom: 50px;
     }
 
     .stp-outer {
