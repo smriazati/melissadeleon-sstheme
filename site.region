@@ -367,6 +367,12 @@
           containerWidth = parentContainer.offsetWidth;
         s1.remove();
 
+        {#  remove extras.. maybe page editor created extra by accident? delete them  }
+        const extraSlides = document.querySelectorAll('main .cta-text p');
+        extraSlides.forEach(s => {
+          s.remove();
+        })
+
         if (window.innerWidth < 768) {
           sliderWidth = window.innerWidth + 300
           parentContainer.style.height = sliderHeight + 'px';
@@ -449,7 +455,7 @@
       }
     }
 
-    function setAnimation(self, section) {
+    function setPhaseFadeOutAnimation(self, section) {
 
       console.log("toggled, isActive:", self.isActive, section)
 
@@ -481,7 +487,7 @@
               pin: true, 
               pinSpacing: true,
               scrub: 0.9,
-              onToggle: self => setAnimation(self, section)
+              onToggle: self => setPhaseFadeOutAnimation(self, section)
             });
           } else {
             gsap.set(section, {
