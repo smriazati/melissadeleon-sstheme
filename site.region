@@ -21,7 +21,7 @@
         <div class="site-navigation-wrapper"> 
           <squarespace:navigation navigationId="siteNav" template="site-navigation" />
           <div id="mobile-nav-extras" class="mobile-menu-item client-portal-button">
-            <button class="flat"><a href="/clients">Client Portal</a></button>
+            <button class="flat"><a href="/clientportal">Client Portal</a></button>
           </div>
 
           <nav class="mobile-menu-item social-nav">
@@ -66,7 +66,7 @@
               <li><a href="/offerings">Offerings</a></li>
               <li><a href="/contact">Contact</a></li>
               <li><a href="/press">Press</a></li>
-              <li><a href="/clients">Client Portal</a></li>
+              <li><a href="/clientportal">Client Portal</a></li>
             </ul>
         </div>
         <nav class="footer-cta">
