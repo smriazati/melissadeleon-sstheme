@@ -1189,6 +1189,9 @@ body.contact {
 
   .sqs-block-instagram {
     padding-bottom: 60px;
+    @media (max-width: @sm-bp) {
+      margin-bottom: 30px;
+    }
   }
   .sqs-block-instagram .sqs-gallery-block-grid .sqs-gallery {
     display: flex;
@@ -1250,10 +1253,15 @@ body.contact {
 
     // contact form
     > .col:last-child {
-      padding-left: 60px;
-      padding-right: 60px;
+      @media (min-width: @sm-bp) {
+        padding-left: 60px;
+        padding-right: 60px;
+      }
       @media (max-width: @sm-bp) {
+        width: 90%;
         margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
       }
       .sqs-block-html {
         margin-bottom: 30px;
