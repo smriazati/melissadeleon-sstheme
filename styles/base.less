@@ -1575,6 +1575,23 @@ body.the-edit  .blog-item {
   }
 }
 
+body.the-edit {
+  .blog-list-pagination {
+    grid-column: ~"2 / 4";
+    margin-top: 30px;
+    .disabled {
+      opacity: 0.5;
+    }
+    a {
+      color: @night;
+      &:hover {
+        font-style: italic;
+        .freightSansItal;
+      }
+    }
+  }
+}
+
 // press
 body.press {
   main {
