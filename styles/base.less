@@ -1514,10 +1514,15 @@ body.the-edit {
   }
 }
 
-.blog-item-image, 
 .blog-item {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+}
+
+.blog-item-image {
+  display: flex;
+  justify-content: flex-start;
   flex-direction: column;
 }
 // the edit individual item
