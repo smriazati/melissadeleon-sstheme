@@ -99,6 +99,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/CSSRulePlugin.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
   <script>
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    ScrollTrigger.defaults({
+      toggleActions: "play play resume reset"
+    });
+
     const ssData = {@|json};
     // ssData.collection.urlId
     function printYear() {
@@ -212,16 +219,8 @@
         caption.innerHTML = emTag.outerHTML + captionText.replace(firstTwoWords.toString(), '');
       })
 
-      {#  Shrink Logo On Scroll  }
 
     }
-
-
-  gsap.registerPlugin(ScrollTrigger);
-
-  ScrollTrigger.defaults({
-    toggleActions: "play play resume reset"
-  });
 
   function showDescriptionAsOverlay() {
     const summary = document.querySelector('.summary-block-collection-type-commercialGallery');
@@ -260,7 +259,7 @@
         gsap.to(logo, {
             scrollTrigger: {
               trigger: hero,
-              start: "bottom top", 
+              start: "bottom-=170 top", 
               end: "+=300",
             },
             'width': '220px'
@@ -619,9 +618,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     });
     
-
-
-
   </script>
   </body>
 </html>
