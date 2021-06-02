@@ -370,6 +370,7 @@
         const extraSlides = document.querySelectorAll('main .cta-text p');
         extraSlides.forEach(s => {
           s.remove();
+          console.log('deleting', s)
         })
 
         if (window.innerWidth < 768) {
