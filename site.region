@@ -305,89 +305,6 @@
       });
     }
 
-    function setCTAMarqueeAnimation() {
-
-      function createSlider() {
-        {#  console.log('making a slider')  }
-        let newSlider = document.createElement('p');
-        newSlider.innerHTML = s1.innerHTML;
-        parent.append(newSlider);
-        addAnimation(newSlider);
-      } 
-
-      function killSlider(slider) {
-        if (slider) {
-          slider.remove();
-        }
-      }  
-
-      function addAnimation(slider) {
-        if (gsap) {
-          let madeNew = false;
-          gsap.set(slider, {
-            x: (sliderWidth * -1) + 'px',
-          })
-          var anim = gsap.to(slider, {
-            x: containerWidth + 'px',
-            duration: duration,
-            ease: 'linear',
-            onUpdate:  () => {
-              if (anim.time() > delay) {
-                if (!madeNew) {
-                  createSlider();
-                  madeNew = true;
-                } 
-              }
-            },
-            onComplete:() => killSlider(slider)
-          })
-        }
-      }
-
-      const s1 = document.querySelector('main .cta-text p');
-      let parent;
-      let duration = 12;
-      let delay = duration / 2;
-      let slideWidth;
-      let containerWidth;
-
-      if (s1) {
-        s1.style.display = 'inline';
-        if (window.innerWidth < 768) {
-          sliderWidth = window.innerWidth + 300
-        } else {
-          sliderWidth = s1.offsetWidth;
-        }
-        let sliderHeight = s1.offsetHeight;
-        parent = s1.parentElement;
-        const parentContainer = parent.parentElement;
-        parent.classList.add('animated-slider-container')
-        parentContainer.classList.add('animated-slider-container-wrapper')
-          containerWidth = parentContainer.offsetWidth;
-        s1.remove();
-
-        {#  remove extras.. maybe page editor created extra by accident? delete them  }
-        const extraSlides = document.querySelectorAll('main .cta-text p');
-        extraSlides.forEach(s => {
-          s.remove();
-          console.log('deleting', s)
-        })
-
-        if (window.innerWidth < 768) {
-          sliderWidth = window.innerWidth + 300
-          parentContainer.style.height = sliderHeight + 'px';
-
-        } else {
-          parentContainer.style.height = sliderHeight + 20 + 'px';
-        }
-              
-        createSlider();
-      }
-      
-
-    }
-
-
     function setPhotoBackgroundAnimation() {
       const container = document.querySelector('.bio-image');
       const background = document.createElement('div');
@@ -519,7 +436,6 @@ window.addEventListener('resize', function(e) {
       if (currentPage === 'home') {
         shrinkLogoOnScroll();
         setCardAnimation();
-        setCTAMarqueeAnimation();
         setPhotoBackgroundAnimation();
       }
 
@@ -602,7 +518,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         emFirstWordsOfCardCaption();
         shrinkLogoOnScroll();
         setCardAnimation();
-        setCTAMarqueeAnimation();
         setPhotoBackgroundAnimation();
 
         var ls = sessionStorage.getItem('namespace.visited');
