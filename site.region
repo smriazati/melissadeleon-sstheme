@@ -379,7 +379,7 @@
 
     function setPhaseFadeOutAnimation(self, section) {
 
-      console.log("toggled, isActive:", self.isActive, section)
+      {#  console.log("toggled, isActive:", self.isActive, section)  }
 
       if (self.isActive) {
         gsap.to(section, {
@@ -405,9 +405,7 @@
             })
             ScrollTrigger.create({
               trigger: section,
-              start: "top 10%", 
-              pin: true, 
-              pinSpacing: true,
+              start: "top bottom-=20%",
               scrub: 0.9,
               onToggle: self => setPhaseFadeOutAnimation(self, section)
             });
