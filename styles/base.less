@@ -712,8 +712,6 @@ body.homepage {
   position: fixed;
   z-index: 100;
   width: 100%;
-  
-  opacity: 0;
 }
 
 .site-logo {
@@ -2391,7 +2389,9 @@ img.loaded {
 @fadeoutDuration: .5s;
 
 
+.site-container,
 .site-header {
+  opacity: 0;
   animation: fadeIn .1s @fadeoutDelay forwards;
 }
 .intro-animation-active {
