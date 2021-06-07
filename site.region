@@ -493,9 +493,7 @@ if (currentPage !== 'home' && ls !== null) {
 }
 
 if (currentPage === 'home') {
-  {#  setIntroAnimation();  }
 
-  setIntroAnimation();
   if (ls == null) {
       setIntroAnimation();
       sessionStorage.setItem('namespace.visited', 1)
