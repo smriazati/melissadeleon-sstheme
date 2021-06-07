@@ -389,6 +389,7 @@
       } else {
         gsap.to(section, {
           autoAlpha: 0,
+          x: -100
         })
       }
 
