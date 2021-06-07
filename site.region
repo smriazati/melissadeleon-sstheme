@@ -436,12 +436,14 @@ window.addEventListener('resize', function(e) {
     resizeTimer = setTimeout(function() {
 
       const currentPage = ssData.collection.urlId;
-      addMarginForFixedHeader();
+
       if (currentPage === 'home') {
         shrinkLogoOnScroll();
         setCardAnimation();
         setPhotoBackgroundAnimation();
       }
+
+      addMarginForFixedHeader();
 
       if (currentPage === 'personal') {
         setPhotoBackgroundAnimationPersonalOfferings();
