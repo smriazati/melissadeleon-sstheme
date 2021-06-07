@@ -158,6 +158,7 @@ a {
   width: 100vw;
   padding: 0;
   display: flex;
+  transition: .1s ease opacity;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -711,6 +712,8 @@ body.homepage {
   position: fixed;
   z-index: 100;
   width: 100%;
+  
+  opacity: 0;
 }
 
 .site-logo {
@@ -2374,12 +2377,23 @@ img.loaded {
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 @introDuration: 1.3s;
 @fadeoutDelay: 1.6s;
 @fadeoutDuration: .5s;
 
 
+.site-header {
+  animation: fadeIn .1s @fadeoutDelay forwards;
+}
 .intro-animation-active {
   position: fixed;
   height: 100%;
@@ -2417,6 +2431,7 @@ img.loaded {
     background-position-x: 50%;
     background-position-y: 100%;
     animation: slideLogoDown @introDuration ease-in forwards;
+    animation-timing-function: ease-in-out;
   }
   &:after {
     background-image: url("/assets/logo-animation/deleon.png");
@@ -2425,6 +2440,7 @@ img.loaded {
     background-position-y: 0%;
 
     animation: slideLogoUp @introDuration ease-in forwards;
+    animation-timing-function: ease-in-out;
   }
 }
 

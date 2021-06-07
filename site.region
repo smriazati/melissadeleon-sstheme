@@ -10,11 +10,11 @@
   </head>
   <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
 
-    <div class="intro-animation">
+    <div id="introAnimation" class="intro-animation">
     </div>
-    <div class="site-container">
+    <div id="siteContainer" class="site-container">
 
-      <header class="site-header">
+      <header id="siteHeader" class="site-header">
         <!-- site navigation -->
         <div class="mobile-menu-item mobile-menu-toggle closed"><img src="/assets/icons/menu.png" alt="three thin parallel vertical lines to open the mobile navigation menu"/></div>
         
@@ -118,7 +118,6 @@
     // offerings page > captions are links
     function convertCaptionsIntoLinks() {
       const captions = document.querySelectorAll('main figcaption.image-caption-wrapper');
-      {#  console.log(captions);  }
       captions.forEach(c => {
         const href = c.previousElementSibling.getAttribute("href");
         var caption = c.querySelector('.image-caption');
@@ -255,7 +254,6 @@
       }
 
       if (isMobile) {
-        console.log('is mobile');
       } else {
         gsap.set(logo, {
           'width': '430px'
@@ -470,7 +468,7 @@ function addExtrasToMobileMenu() {
 
 function setIntroAnimation() {
 
-  let animation = document.querySelector('.intro-animation');
+  let animation = document.getElementById('introAnimation');
   animation.classList.add('intro-animation-active');
 
 }
@@ -481,29 +479,32 @@ function detectClientTemplate() {
   if (clientId) {
     isClientPage = true;
   }
-  console.log(isClientPage);
   if (isClientPage) {
     document.querySelector('body').classList.add('client-template');
   }
 }
 
+const currentPage = ssData.collection.urlId;
+var ls = sessionStorage.getItem('namespace.visited');
+
+if (currentPage !== 'home' && ls !== null) {
+  const siteHeader = document.getElementById('siteHeader');
+  siteHeader.style.opacity = '1';
+}
+
+if (currentPage === 'home') {
+  {#  setIntroAnimation();  }
+
+  setIntroAnimation();
+  if (ls == null) {
+      setIntroAnimation();
+      sessionStorage.setItem('namespace.visited', 1)
+  }
+}
+
+detectClientTemplate();
+
 document.addEventListener("DOMContentLoaded", function(event) { 
-      const currentPage = ssData.collection.urlId;
-      document.querySelector('body').classList.add(currentPage)
-      detectClientTemplate();
-
-      addMarginForFixedHeader();
-
-      if (currentPage === 'home') {
-
-        var ls = sessionStorage.getItem('namespace.visited');
-        if (ls == null) {
-            setIntroAnimation();
-            sessionStorage.setItem('namespace.visited', 1)
-        }
-      }
-
-
       printYear();
 
       addExtrasToMobileMenu();
@@ -537,6 +538,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         setCardAnimation();
         setPhotoBackgroundAnimation();
       }
+
+      addMarginForFixedHeader();
 
       if (currentPage === 'personal') {
         setPhotoBackgroundAnimationPersonalOfferings();
