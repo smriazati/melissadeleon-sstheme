@@ -486,22 +486,33 @@ function detectClientTemplate() {
 }
 
 document.addEventListener("DOMContentLoaded", function(event) { 
+      const currentPage = ssData.collection.urlId;
+      document.querySelector('body').classList.add(currentPage)
+      detectClientTemplate();
+
+      addMarginForFixedHeader();
+
+      if (currentPage === 'home') {
+
+        var ls = sessionStorage.getItem('namespace.visited');
+        if (ls == null) {
+            setIntroAnimation();
+            sessionStorage.setItem('namespace.visited', 1)
+        }
+      }
+
+
       printYear();
 
       addExtrasToMobileMenu();
-      detectClientTemplate();
-      
       const button = document.querySelector('.mobile-menu-toggle');
       button.addEventListener("click", toggleMenu);
 
-      const currentPage = ssData.collection.urlId;
-      document.querySelector('body').classList.add(currentPage)
 
       if (currentPage === 'offerings') {
         convertCaptionsIntoLinks();
       }
 
-      addMarginForFixedHeader();
 
       var hasAccordion = checkForAccordion();
       if (hasAccordion) {
@@ -523,12 +534,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         shrinkLogoOnScroll();
         setCardAnimation();
         setPhotoBackgroundAnimation();
-
-        var ls = sessionStorage.getItem('namespace.visited');
-        if (ls == null) {
-            setIntroAnimation();
-            sessionStorage.setItem('namespace.visited', 1)
-        }
       }
 
       if (currentPage === 'personal') {
