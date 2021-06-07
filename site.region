@@ -223,15 +223,20 @@
     }
 
   function showDescriptionAsOverlay() {
-    const summary = document.querySelector('.summary-block-collection-type-commercialGallery');
-    const thumbs = summary.querySelectorAll('.summary-thumbnail-container');
-    thumbs.forEach( thumb => {
-      const description = thumb.dataset.description;
-      const newDiv = document.createElement('div');
-      newDiv.innerHTML = description;
-      newDiv.classList.add('thumbnail-description')
-      thumb.insertBefore(newDiv, thumb.firstChild);
-    })    
+    const summaries = document.querySelectorAll('.summary-block-collection-type-commercialGallery');
+    if (summaries) {
+      summaries.forEach( summary => {
+        const thumbs = summary.querySelectorAll('.summary-thumbnail-container');
+        thumbs.forEach( thumb => {
+          const description = thumb.dataset.description;
+          const newDiv = document.createElement('div');
+          newDiv.innerHTML = description;
+          newDiv.classList.add('thumbnail-description')
+          thumb.insertBefore(newDiv, thumb.firstChild);
+        })   
+      })
+    }
+
   }
 
     function shrinkLogoOnScroll() {

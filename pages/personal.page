@@ -92,7 +92,7 @@
                     <h3>+ Beyond</h3>
                 </div>
                 <div class="phase-text">
-                    <p>Bypass any future stress surrounding style choices. If you have questions going forward (choosing an outfit for a special event, purchasing a new wardrobe item, or pairing shoes and accessories to an outfit) please consider us a go-to resource for real-time help! Call, text, email, or chat with us directly via your MdS VIrtual Styling Home. We are here to help and cheer you on!</p>
+                    <p>Bypass any future stress surrounding style choices. If you have questions going forward (choosing an outfit for a special event, purchasing a new wardrobe item, or pairing shoes and accessories to an outfit) please consider us a go-to resource for real-time help! Call, text, or email. We are here to cheer you on!</p>
                 </div>
                 <div class="phase-image">
                     <img src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/1621533874220-05Q8UGKFAZ4JQRUJBIEN/ke17ZwdGBToddI8pDm48kNTeaMky8yoQDxxhMt-vg1JZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVGuK9LMzbDytOb7qbpFsRuWMvfUCfOPg8X7ayXSl0E3FbgdyDHYGf6U4mwRTE1dP2k/_DSC9377+1.jpg?format=1000w" alt="" />
@@ -106,10 +106,10 @@
         <img src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/1622215265801-75008EE5QU9L5504VBED/ke17ZwdGBToddI8pDm48kJ09lsZAItu55B7Y-ulAjmdZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpzbWkBbEzP64OAHm7yA7JNaIPm11_gJXBQo6wCoiHL8CLx4c1L5oEy74n4zGzq5zbw/MdS_submark-black-crop.png?format=150w" alt="melissa de leon logo" />
     </div>
     <div class="cta-headline">
-        <p>Ready to get started?</p>
+        <p>Begin your style journey.</p>
     </div>
     <div class="cta-button">
-        <button class="flat"><a href="">Contact Us Here!</a></button>
+        <button class="flat"><a href="">Contact MdS Here!</a></button>
     </div>
 </div>
 
@@ -119,6 +119,14 @@
         <h3>A La Carte Services</h3>
     </div>
     <div class="accordion ala-carte">
+        <div class="accordion-item closed">
+            <div class="accordion-headline">
+                <h4>MdS Personal Style Mix + Match</h4>
+            </div>
+            <div class="accordion-content">
+                <p>In addition to the Consultation + Style Discovery, receive a single add-on phase to help hone in on your personal style. Choose the Wardrobe Edit or the Shop + Fit to pair with a Consultation + Styling Discovery, and I will make the most of your time to help you. Mix + Match services are a great gifting option for family members and friends.</em></p>
+            </div>
+        </div>
         <div class="accordion-item closed">
             <div class="accordion-headline">
                 <h4>Bridal + Wedding Styling</h4>

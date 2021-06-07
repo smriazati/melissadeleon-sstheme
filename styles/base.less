@@ -1683,7 +1683,7 @@ body.commercial {
       }
     }
     
-    .intro-text, .accordion-wrapper, .commercial-gallery {
+    .intro-text, .accordion-wrapper {
       margin-top: 15px;
       @media (min-width: @sm-bp) {
         margin-top: 100px;
@@ -1722,6 +1722,7 @@ body.commercial {
     margin-top: 30px;
     @media (min-width: @sm-bp) {
       margin-top: 100px;
+      margin-bottom: 100px;
     }    
     display: flex;
     flex-direction: column;
@@ -2009,6 +2010,17 @@ body.personal {
 
             @media (min-width: @sm-bp) {
               padding: 0 20px;            
+            }
+
+            &:after {
+              content: '';
+              background-image: url('/assets/icons/arrowDownDark.png');
+              background-repeat: no-repeat;
+              background-size: contain;
+              width: 30px;
+              height: 30px;
+              margin-top: 30px;
+              display: block;
             }
           }
           .phase-image {
