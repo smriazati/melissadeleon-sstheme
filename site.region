@@ -487,12 +487,6 @@ function detectClientTemplate() {
 const currentPage = ssData.collection.urlId;
 var ls = sessionStorage.getItem('namespace.visited');
 
-if (currentPage !== 'home' && ls !== null) {
-  const siteHeader = document.getElementById('siteHeader');
-  const siteContainer = document.getElementById('siteContainer');
-  siteHeader.style.opacity = '1';
-  siteContainer.style.opacity = '1';
-}
 
 if (currentPage === 'home') {
 
