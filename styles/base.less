@@ -672,6 +672,7 @@ body.homepage {
   }
 
 }
+
 button.flat,
 .small-button-style-solid .sqs-block-button .sqs-block-button-element--small, .medium-button-style-solid .sqs-block-button .sqs-block-button-element--medium, .large-button-style-solid .sqs-block-button .sqs-block-button-element--large {
   padding: 11px 18px;
@@ -693,7 +694,15 @@ button.flat,
     border: 1px solid @night;
   }
 }
-
+button.flat {
+  &:hover {
+    background: transparent;
+    a {
+      font-style: normal;
+      .freightSans;
+    }
+  }
+}
 /* Break grid and stack blocks on small screens
 ***************************************************/
 
