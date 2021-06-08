@@ -115,12 +115,15 @@
   background-color: @blush;
 }
 
-img {
+.thumb-image {
   transition: .3s ease opacity;
-}
-img.loading {
   opacity: 0;
 }
+
+.thumb-image.loaded {
+  opacity: 1;
+}
+
 html {
   font-size: 16px;
   width: 100%;
@@ -2376,11 +2379,6 @@ body.clients {
   }
 }
 
-
-img.loaded {
-  opacity: 1;
-  transition: 0.3s ease all;
-}
 
 .accordion-headline {
   z-index: 15;
