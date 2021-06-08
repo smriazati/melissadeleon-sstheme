@@ -176,8 +176,7 @@ button {
 
 body:not(.button-style-default).button-style-solid .sqs-editable-button, body:not(.button-style-default).button-style-solid .sqs-editable-button-style,
 body:not(.button-style-default) .sqs-editable-button, 
-body:not(.button-style-default) .sqs-editable-button-font,
-button {
+body:not(.button-style-default) .sqs-editable-button-font {
   .h3;
   font-style: normal;
   font-weight: 500;
@@ -188,10 +187,6 @@ button {
   color: @cream;
   background: @night;
   transition: .3s ease-in all !important;
-  &:hover {
-    border: 1px solid black;
-    background: transparent;
-  }
 }
 
 body:not(.button-style-default).button-style-solid .sqs-editable-button:hover, body:not(.button-style-default).button-style-solid .sqs-editable-button-style:hover {
@@ -1805,6 +1800,12 @@ button:not(.flat) {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid transparent;
+  transition: .3s ease all;
+  &:hover {
+    background: #fff;
+    border: 1px solid @night;
+  }
   a {
     padding: 15px 30px;
     color: @cream;
