@@ -114,8 +114,6 @@
       document.getElementById("copyrightYear").innerHTML = n;
     }
     
-
-    // offerings page > captions are links
     function convertCaptionsIntoLinks() {
       const captions = document.querySelectorAll('main figcaption.image-caption-wrapper');
       captions.forEach(c => {
