@@ -186,7 +186,11 @@ body:not(.button-style-default) .sqs-editable-button-font {
   text-transform: uppercase;
   color: @cream;
   background: @night;
-  transition: .3s ease-in all !important;;
+  transition: .3s ease-in all !important;
+  &:hover {
+    border: 1px solid black;
+    background: transparent;
+  }
 }
 
 body:not(.button-style-default).button-style-solid .sqs-editable-button:hover, body:not(.button-style-default).button-style-solid .sqs-editable-button-style:hover {
