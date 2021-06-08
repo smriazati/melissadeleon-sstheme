@@ -2222,11 +2222,6 @@ body.about {
       @media (min-width: @sm-bp) {
         padding-left: 30px;
       }
-      .sqs-block-button .sqs-block-button-element--small:hover, 
-      .sqs-block-button .sqs-block-button-element--medium:hover, 
-      .sqs-block-button .sqs-block-button-element--large:hover {
-        border: none !important;
-      }
     }
     .about-text {
       grid-column: ~"4 / 6";
@@ -2264,6 +2259,9 @@ body.about {
         background: transparent;
         display: flex;
         align-items: center;
+        &:hover {
+          border: 1px solid transparent !important;
+        }
         &:after {
           content: '';
           background: url('/assets/icons/arrowDark.png') center center no-repeat scroll;
