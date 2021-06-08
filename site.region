@@ -122,8 +122,8 @@
         const href = c.previousElementSibling.getAttribute("href");
         var caption = c.querySelector('.image-caption');
         const captionText = caption.outerHTML;
-
         if (href && captionText) {
+        console.log(captionText, href);
           var a = document.createElement('a');
           a.href = href;
           a.classList.add('caption-wrapper-link')
@@ -495,21 +495,14 @@ if (currentPage === 'home') {
       sessionStorage.setItem('namespace.visited', 1)
   }
 }
-
 detectClientTemplate();
 
 document.addEventListener("DOMContentLoaded", function(event) { 
-      printYear();
+      document.querySelector('body').classList.add(currentPage);
 
       addExtrasToMobileMenu();
       const button = document.querySelector('.mobile-menu-toggle');
       button.addEventListener("click", toggleMenu);
-
-
-      if (currentPage === 'offerings') {
-        convertCaptionsIntoLinks();
-      }
-
 
       var hasAccordion = checkForAccordion();
       if (hasAccordion) {
@@ -535,10 +528,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
       addMarginForFixedHeader();
 
+      if (currentPage === 'offerings') {
+        convertCaptionsIntoLinks();
+      }
+
       if (currentPage === 'personal') {
         setPhotoBackgroundAnimationPersonalOfferings();
         setPhasesAnimation();
       }
+
+      printYear();
 
     });
     
