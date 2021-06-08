@@ -1802,16 +1802,23 @@ button:not(.flat) {
   align-items: center;
   border: 1px solid transparent;
   transition: .3s ease all;
-  &:hover {
-    background: #fff;
-    border: 1px solid @night;
-  }
+
   a {
     padding: 15px 30px;
+    transition: .3s ease all;
+
     color: @cream;
     .h3;
     display: block;
   }  
+
+  &:hover {
+    background: #fff;
+    border: 1px solid @night;
+    a {
+      color: @night;
+    }
+  }
 }
 button.flat {
   background: transparent;
