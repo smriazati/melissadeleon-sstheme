@@ -2259,17 +2259,15 @@ body.about {
         background: transparent;
         display: flex;
         align-items: center;
-        &:hover {
-          border: 1px solid transparent;
-          font-style: italic;
-          .freightSansItal;
-        }
+        transition: .3s ease all;
+
         &:after {
           content: '';
           background: url('/assets/icons/arrowDark.png') center center no-repeat scroll;
           width: 20px;
           height: 20px;
           margin-left: 11px;
+          transition: .3s ease all;
           display: inline-block;
           -webkit-background-size: cover;
           -moz-background-size: cover;
@@ -2277,6 +2275,14 @@ body.about {
           background-size: contain;
           &:hover {
             cursor: pointer;
+          }
+        }
+        &:hover {
+          border: 1px solid transparent;
+          font-style: italic;
+          .freightSansItal;
+          &:after {
+            margin-left: 22px;
           }
         }
       }
