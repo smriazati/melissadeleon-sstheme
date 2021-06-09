@@ -253,7 +253,8 @@
       if (isMobile) {
       } else {
         gsap.set(logo, {
-          'width': '430px'
+          'width': '430px',
+          autoRound: false
         })
 
         gsap.to(logo, {
@@ -262,7 +263,8 @@
               start: "bottom-=170 top", 
               end: "+=300",
             },
-            'width': '220px'
+            'width': '220px',
+            autoRound: false
         });
         navItems.forEach(navItem => {
             gsap.to(navItem, {
@@ -533,8 +535,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
       printYear();
 
+
     });
-    
+
+  
+
+
+
+
   </script>
   </body>
 </html>

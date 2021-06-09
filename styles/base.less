@@ -135,6 +135,7 @@ body {
   font-size: 100%;
   font-weight: normal;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 img {
   max-width: 100%;
@@ -250,13 +251,14 @@ body.homepage {
   background: @cream;
   main.content-container > div > div > div {
     display: grid;
+    
     grid-template-columns: .5fr 540px 540px .5fr;
     @media (max-width: 1080px) {
       grid-template-columns: .05fr .49fr .49fr .05fr;        
     }
     grid-auto-rows: min-content;
     @media (max-width: @sm-bp) {
-      grid-auto-rows: auto;
+      grid-auto-rows: 80vh auto;
     }
     max-width: 100%;
     overflow: hidden;
@@ -271,6 +273,12 @@ body.homepage {
     > [class*=cta-] {
       background: @clay;
       color: @cream;
+    }
+  }
+
+  .sqs-layout .sqs-row .hero.sqs-block:first-child {
+    @media (max-width: @sm-bp) {
+      padding-top: 0 !important;
     }
   }
 
