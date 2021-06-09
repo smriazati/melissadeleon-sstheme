@@ -114,18 +114,16 @@
     }
     
     function convertCaptionsIntoLinks() {
-      const main = document.querySelector("main");
-
-      const caps = main.querySelectorAll("figcaption.image-caption-wrapper");
-      caps.forEach(c => {
+      const captions = document.querySelectorAll('main figcaption.image-caption-wrapper');
+      captions.forEach(c => {
         const href = c.previousElementSibling.getAttribute("href");
-        var caption = c.querySelector(".image-caption");
+        var caption = c.querySelector('.image-caption');
         const captionText = caption.outerHTML;
         if (href && captionText) {
         console.log(captionText, href);
-          var a = document.createElement("a");
+          var a = document.createElement('a');
           a.href = href;
-          a.classList.add("caption-wrapper-link")
+          a.classList.add('caption-wrapper-link')
           a.innerHTML = captionText;
 
           c.insertBefore(a, caption);
@@ -136,7 +134,7 @@
     }
 
     function checkForAccordion() {
-      const accordion = document.querySelector(".accordion");
+      const accordion = document.querySelector('.accordion');
       if (accordion) {
         return true;
       } else {
@@ -145,43 +143,43 @@
     }
 
     function activateAccordion() {
-      const accordions = document.querySelectorAll("main .accordion");
+      const accordions = document.querySelectorAll('main .accordion');
       accordions.forEach(accordion => {
-        const items = accordion.querySelectorAll(".accordion-item");
+        const items = accordion.querySelectorAll('.accordion-item');
         items.forEach(item => {
-          item.addEventListener("click", event => {
+          item.addEventListener('click', event => {
 
-            const itemContent = item.querySelector(".accordion-content");
+            const itemContent = item.querySelector('.accordion-content');
 
-            if (item.classList.contains("closed")) {
-              item.classList.add("open");
-              item.classList.remove("closed");
+            if (item.classList.contains('closed')) {
+              item.classList.add('open');
+              item.classList.remove('closed');
 
               if (gsap) {
                 gsap.set(itemContent, {
                   y: -10,
-                  "opacity": 0,
+                  'opacity': 0,
                 })
                 gsap.to(itemContent, {
                   y: 0,
-                  "opacity": 1,
-                  duration: 0.6
+                  'opacity': 1,
+                  duration: .6
                 })
               }
 
             } else {
-              item.classList.add("closed");
-              item.classList.remove("open");
+              item.classList.add('closed');
+              item.classList.remove('open');
 
               if (gsap) {
                 gsap.set(itemContent, {
                   y: 0,
-                  "opacity": 1
+                  'opacity': 1
                 })
                 gsap.to(itemContent, {
                   y: -10,
-                  "opacity": 0,
-                  duration: 0.3
+                  'opacity': 0,
+                  duration: .3
                 })
               }
 
@@ -193,8 +191,8 @@
     }
 
     function checkForFeaturedSinglePage() {
-      const isFeatured = document.querySelectorAll("article.featured");
-      const hasBlogItem = document.querySelectorAll(".blog-item");
+      const isFeatured = document.querySelectorAll('article.featured');
+      const hasBlogItem = document.querySelectorAll('.blog-item');
       if (isFeatured.length > 0 && hasBlogItem.length > 0) {
         return true;
       } else {
@@ -205,31 +203,31 @@
     function emFirstWordsOfCardCaption() {
 
       {#  CARDS  }
-      const cards = document.querySelectorAll(".card");
+      const cards = document.querySelectorAll('.card');
       cards.forEach( card => {
-        const caption = card.querySelector("figcaption .image-caption p");
+        const caption = card.querySelector('figcaption .image-caption p');
         var captionText = caption.textContent;
-        const firstTwoWords = captionText.split(" ").slice(0,2).join(" ");
+        const firstTwoWords = captionText.split(' ').slice(0,2).join(' ');
       
-        const emTag = document.createElement("em");
+        const emTag = document.createElement('em');
         emTag.innerHTML = firstTwoWords;
 
-        caption.innerHTML = emTag.outerHTML + captionText.replace(firstTwoWords.toString(), "");
+        caption.innerHTML = emTag.outerHTML + captionText.replace(firstTwoWords.toString(), '');
       })
 
 
     }
 
   function showDescriptionAsOverlay() {
-    const summaries = document.querySelectorAll(".summary-block-collection-type-commercialGallery");
+    const summaries = document.querySelectorAll('.summary-block-collection-type-commercialGallery');
     if (summaries) {
       summaries.forEach( summary => {
-        const thumbs = summary.querySelectorAll(".summary-thumbnail-container");
+        const thumbs = summary.querySelectorAll('.summary-thumbnail-container');
         thumbs.forEach( thumb => {
           const description = thumb.dataset.description;
-          const newDiv = document.createElement("div");
+          const newDiv = document.createElement('div');
           newDiv.innerHTML = description;
-          newDiv.classList.add("thumbnail-description")
+          newDiv.classList.add('thumbnail-description')
           thumb.insertBefore(newDiv, thumb.firstChild);
         })   
       })
@@ -238,10 +236,10 @@
   }
 
     function shrinkLogoOnScroll() {
-      const header = document.querySelector(".site-header");
-      const logo = header.querySelector(".site-logo");
-      const navItems = header.querySelectorAll(".site-navigation-item");
-      const hero = document.querySelector(".hero")
+      const header = document.querySelector('.site-header');
+      const logo = header.querySelector('.site-logo');
+      const navItems = header.querySelectorAll('.site-navigation-item');
+      const hero = document.querySelector('.hero')
 
       const windowWidth = window.innerWidth;
       let isMobile;
@@ -255,7 +253,7 @@
       if (isMobile) {
       } else {
         gsap.set(logo, {
-          "width": "430px"
+          'width': '430px'
         })
 
         gsap.to(logo, {
@@ -264,7 +262,7 @@
               start: "bottom-=170 top", 
               end: "+=300",
             },
-            "width": "220px"
+            'width': '220px'
         });
         navItems.forEach(navItem => {
             gsap.to(navItem, {
@@ -273,16 +271,16 @@
                 start: "bottom top", 
                 end: "+=300",
               },
-              "padding-top": "15px",
-              "padding-bottom": "15px"
+              'padding-top': '15px',
+              'padding-bottom': '15px'
           });
       });
       }
     }
 
     function setCardAnimation() {
-      const trigger = document.querySelector("main .submark-headline");
-      const refs = document.querySelectorAll("main .card");
+      const trigger = document.querySelector('main .submark-headline');
+      const refs = document.querySelectorAll('main .card');
       refs.forEach(card => {
           gsap.to(card, {
             scrollTrigger: {
@@ -290,8 +288,8 @@
               start: "top 10%", 
               scrub: .3
             },
-            y: "-50vh",
-            "margin-bottom": "15px",
+            y: '-50vh',
+            'margin-bottom': '15px',
           });
 
         if (window.innerWidth < 768) {
@@ -301,76 +299,76 @@
               start: "top 10%", 
               scrub: .3
             },
-            "margin-bottom": "-300px",
+            'margin-bottom': '-300px',
           });
         }
       });
     }
 
     function setPhotoBackgroundAnimation() {
-      const container = document.querySelector(".bio-image");
-      const background = document.createElement("div");
-      const endTrigger = document.querySelector(".site-footer");
+      const container = document.querySelector('.bio-image');
+      const background = document.createElement('div');
+      const endTrigger = document.querySelector('.site-footer');
       let figure;
       if (container) {
-        figure = container.querySelector("figure");
-        background.classList.add("background-extending");
+        figure = container.querySelector('figure');
+        background.classList.add('background-extending');
         figure.append(background);
       }
       if (gsap && window.innerWidth > 768) {
         gsap.set(background, {
-          "height": "0%"
+          'height': '0%'
         })
         gsap.to(background, {
             scrollTrigger: {
               trigger: container,
               start: "top top+=50%",
               endTrigger: endTrigger,
-              end: "top bottom",
+              end: 'top bottom',
               scrub: 1.1
             },
-            "height": "+=100%"
+            'height': '+=100%'
         });
       }
     }
 
 
     function setPhotoBackgroundAnimationPersonalOfferings() {
-      const container = document.querySelector(".intro-image-wrapper");
-      const background = container.querySelector(".clay-bg")
-      const endTrigger = document.querySelector(".cta-banner");
+      const container = document.querySelector('.intro-image-wrapper');
+      const background = container.querySelector('.clay-bg')
+      const endTrigger = document.querySelector('.cta-banner');
       if (gsap && window.innerWidth > 768) {
         gsap.set(background, {
-          "height": "0%"
+          'height': '0%'
         })
         gsap.to(background, {
             scrollTrigger: {
               trigger: container,
               start: "top top+=50%",
               endTrigger: endTrigger,
-              end: "top bottom",
+              end: 'top bottom',
               scrub: 1.1
             },
-            "height": "+=100%"
+            'height': '+=100%'
         });
       }
     }
 
     function addMarginForFixedHeader() {
-      const header = document.querySelector(".site-header");
+      const header = document.querySelector('.site-header');
       if (header) {
         const hW = header.offsetHeight;
         const main = header.nextElementSibling;
-        main.style.marginTop = hW + "px";
+        main.style.marginTop = hW + 'px';
       }
     }
 
     function toggleMenu() {
-      const header = document.querySelector(".site-header");
-      if (header.classList.contains("site-header-open")) {
-        header.classList.remove("site-header-open");
+      const header = document.querySelector('.site-header');
+      if (header.classList.contains('site-header-open')) {
+        header.classList.remove('site-header-open');
       } else {
-        header.classList.add("site-header-open");
+        header.classList.add('site-header-open');
       }
     }
 
@@ -428,11 +426,11 @@
     }
 
 let resizeTimer;
-window.addEventListener("resize", function(e) {
+window.addEventListener('resize', function(e) {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function() {
 
-      if (currentPage === "home") {
+      if (currentPage === 'home') {
         shrinkLogoOnScroll();
         setCardAnimation();
         setPhotoBackgroundAnimation();
@@ -440,7 +438,7 @@ window.addEventListener("resize", function(e) {
 
       addMarginForFixedHeader();
 
-      if (currentPage === "personal") {
+      if (currentPage === 'personal') {
         setPhotoBackgroundAnimationPersonalOfferings();
         setPhasesAnimation();
       }
@@ -449,14 +447,14 @@ window.addEventListener("resize", function(e) {
 });
 
 function addExtrasToMobileMenu() {
-  const header = document.querySelector(".site-header");
-  const nav = header.querySelector(".site-navigation");
-  const extras = header.querySelector("#mobile-nav-extras");
+  const header = document.querySelector('.site-header');
+  const nav = header.querySelector('.site-navigation');
+  const extras = header.querySelector('#mobile-nav-extras');
 
-  let newExtras = document.createElement("div");
+  let newExtras = document.createElement('div');
   newExtras.innerHTML = extras.innerHTML;
-  newExtras.classList.add("mobile-menu-item");
-  newExtras.classList.add("client-portal-button");
+  newExtras.classList.add('mobile-menu-item');
+  newExtras.classList.add('client-portal-button');
 
   nav.append(newExtras);
   extras.remove();
@@ -465,39 +463,39 @@ function addExtrasToMobileMenu() {
 
 function setIntroAnimation() {
 
-  let animation = document.getElementById("introAnimation");
-  animation.classList.add("intro-animation-active");
+  let animation = document.getElementById('introAnimation');
+  animation.classList.add('intro-animation-active');
 
 }
 
 function detectClientTemplate() {
   let isClientPage = false;
-  const clientId = document.getElementById("client-template");
+  const clientId = document.getElementById('client-template');
   if (clientId) {
     isClientPage = true;
   }
   if (isClientPage) {
-    document.querySelector("body").classList.add("client-template");
+    document.querySelector('body').classList.add('client-template');
   }
 }
 
-const currentPage = {@|json.collection.urlId};
+const currentPage = {@|json}.collection.urlId;
 
-var ls = sessionStorage.getItem("namespace.visited");
-if (currentPage === "home") {
+var ls = sessionStorage.getItem('namespace.visited');
+if (currentPage === 'home') {
 
   if (ls === null) {
       setIntroAnimation();
-      sessionStorage.setItem("namespace.visited", 1)
+      sessionStorage.setItem('namespace.visited', 1)
   }
 }
 detectClientTemplate();
 
 document.addEventListener("DOMContentLoaded", function(event) { 
-      document.querySelector("body").classList.add(currentPage);
+      document.querySelector('body').classList.add(currentPage);
 
       addExtrasToMobileMenu();
-      const button = document.querySelector(".mobile-menu-toggle");
+      const button = document.querySelector('.mobile-menu-toggle');
       button.addEventListener("click", toggleMenu);
 
       var hasAccordion = checkForAccordion();
@@ -505,17 +503,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
         activateAccordion();
       }
 
-      const summary = document.querySelector(".summary-block-collection-type-commercialGallery");
+      const summary = document.querySelector('.summary-block-collection-type-commercialGallery');
       if (summary) {
         showDescriptionAsOverlay();
       }
 
       var isFeaturedItem = checkForFeaturedSinglePage();
       if (isFeaturedItem) {
-        document.querySelector("body").classList.add("featured-post")
+        document.querySelector('body').classList.add('featured-post')
       }
 
-      if (currentPage === "home") {
+      if (currentPage === 'home') {
         emFirstWordsOfCardCaption();
         shrinkLogoOnScroll();
         setCardAnimation();
@@ -524,11 +522,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
       addMarginForFixedHeader();
 
-      if (currentPage === "offerings") {
+      if (currentPage === 'offerings') {
         convertCaptionsIntoLinks();
       }
 
-      if (currentPage === "personal") {
+      if (currentPage === 'personal') {
         setPhotoBackgroundAnimationPersonalOfferings();
         setPhasesAnimation();
       }
