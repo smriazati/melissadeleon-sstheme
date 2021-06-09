@@ -107,7 +107,7 @@
     });
 
     const ssData = {@|json};
-    // ssData.collection.urlId
+
     function printYear() {
       var d = new Date();
       var n = d.getFullYear();
@@ -488,7 +488,7 @@ var ls = sessionStorage.getItem('namespace.visited');
 
 if (currentPage === 'home') {
 
-  if (ls == null) {
+  if (ls === null) {
       setIntroAnimation();
       sessionStorage.setItem('namespace.visited', 1)
   }
