@@ -292,18 +292,20 @@
             },
             y: '-50%',
             'margin-bottom': '15px',
+            autoRound: false
           });
 
-        if (window.innerWidth < 768) {
-          gsap.to(card.parentNode, {
-            scrollTrigger: {
-              trigger: trigger,
-              start: "top 10%", 
-              scrub: 0.3
-            },
-            'margin-bottom': '-300px',
-          });
-        }
+          if (window.innerWidth < 768) {
+            gsap.to(card.parentNode, {
+              scrollTrigger: {
+                trigger: trigger,
+                start: "top 10%", 
+                scrub: 0.3
+              },
+              'margin-bottom': '-300px',
+              autoRound: false
+            });
+          }
       });
     }
 
