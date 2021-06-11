@@ -293,7 +293,8 @@
             gsap.to(card, {
               scrollTrigger: {
                 trigger: trigger,
-                start: "top 10%"
+                start: "top 10%", 
+                scrub: 1
               },
               y: '-600px',
               'margin-bottom': '15px',
@@ -307,7 +308,8 @@
             gsap.to(card.parentNode, {
               scrollTrigger: {
                 trigger: trigger,
-                start: "top 10%"
+                start: "top 10%", 
+                scrub: 1
               },
               'margin-bottom': '-300px',
               autoRound: false
