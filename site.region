@@ -302,7 +302,7 @@
           });
 
           if (window.innerWidth < 768) {
-            gsap.set(card, {
+            gsap.set(card.parentNode, {
               'margin-bottom': '0',
             });
 
