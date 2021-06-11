@@ -289,32 +289,28 @@
             'margin-bottom': '0',
             autoRound: false
           });
-
-
           if (window.innerWidth < 768) {
-           
-          gsap.to(card, {
-            scrollTrigger: {
-              trigger: trigger,
-              start: "top 10%", 
-              scrub: 0.3
-            },
-            y: '-300px',
-            'margin-bottom': '15px',
-            autoRound: false
-          });
+            gsap.to(card, {
+              scrollTrigger: {
+                trigger: trigger,
+                start: "top 10%", 
+                scrub: 0.3
+              },
+              y: '-600px',
+              'margin-bottom': '15px',
+              autoRound: false
+            });
           } else {
-
-          gsap.to(card, {
-            scrollTrigger: {
-              trigger: trigger,
-              start: "top 10%", 
-              scrub: 0.3
-            },
-            y: '-50%',
-            'margin-bottom': '15px',
-            autoRound: false
-          });
+            gsap.to(card, {
+              scrollTrigger: {
+                trigger: trigger,
+                start: "top 10%", 
+                scrub: 0.3
+              },
+              y: '-50%',
+              'margin-bottom': '15px',
+              autoRound: false
+            });
           }
       });
     }
