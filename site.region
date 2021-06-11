@@ -284,6 +284,12 @@
       const trigger = document.querySelector('main .submark-headline');
       const refs = document.querySelectorAll('main .card');
       refs.forEach(card => {
+          gsap.set(card, {
+            y: '0',
+            'margin-bottom': '0',
+            autoRound: false
+          });
+
           gsap.to(card, {
             scrollTrigger: {
               trigger: trigger,
@@ -296,6 +302,10 @@
           });
 
           if (window.innerWidth < 768) {
+            gsap.set(card, {
+              'margin-bottom': '0',
+            });
+
             gsap.to(card.parentNode, {
               scrollTrigger: {
                 trigger: trigger,
