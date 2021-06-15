@@ -289,8 +289,23 @@
             'margin-bottom': '0',
             autoRound: false
           });
-
+          
           if (window.innerWidth < 768) {
+
+            gsap.set(card.parentNode, {
+              'margin-bottom': '0',
+            });
+
+            gsap.to(card.parentNode, {
+              scrollTrigger: {
+                trigger: trigger,
+                start: "top 10%", 
+                scrub: 1
+              },
+              'margin-bottom': '-300px',
+              autoRound: false
+            });
+
             gsap.to(card, {
               scrollTrigger: {
                 trigger: trigger,
@@ -301,7 +316,6 @@
               'margin-bottom': '15px',
               autoRound: false
             });
-
             
           } else {
             gsap.to(card, {
