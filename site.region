@@ -243,7 +243,6 @@
 
       const windowWidth = window.innerWidth;
       let isMobile;
-
       if (windowWidth < 768) {
         isMobile = true;
       } else {
@@ -291,8 +290,8 @@
           const isFirst = card.classList.contains('card1');
 
           gsap.set(column, {
-            y: '0',
-            'margin-bottom': '0'
+            y: '0px',
+            'margin-bottom': '0px'
           });
           
           if (isFirst) {
@@ -300,22 +299,20 @@
               scrollTrigger: {
                 trigger: trigger,
                 start: "top 10%", 
-                scrub: 0
+                scrub: 0.3
               },
               y: '-600px',
-              'margin-bottom': '15px',
-              autoRound: false
+              'margin-bottom': '15px'
             });
           } else {
             gsap.to(column, {
               scrollTrigger: {
                 trigger: trigger,
                 start: "top 10%", 
-                scrub: 0
+                scrub: 0.3
               },
               y: '-800px',
-              'margin-bottom': '-750px',
-              autoRound: false
+              'margin-bottom': '-750px'
             });
           }
         } else {
