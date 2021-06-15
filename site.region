@@ -284,29 +284,20 @@
       const trigger = document.querySelector('main .submark-headline');
       const refs = document.querySelectorAll('main .card');
       refs.forEach(card => {
-          gsap.set(card, {
+
+        if (window.innerWidth < 768) {
+
+          const column = card.parentNode;
+          const isFirst = card.classList.contains('card1');
+
+          gsap.set(column, {
             y: '0',
             'margin-bottom': '0',
             autoRound: false
           });
           
-          if (window.innerWidth < 768) {
-
-            gsap.set(card.parentNode, {
-              'margin-bottom': '0',
-            });
-
-            gsap.to(card.parentNode, {
-              scrollTrigger: {
-                trigger: trigger,
-                start: "top 10%", 
-                scrub: 1
-              },
-              'margin-bottom': '-300px',
-              autoRound: false
-            });
-
-            gsap.to(card, {
+          if (isFirst) {
+            gsap.to(column, {
               scrollTrigger: {
                 trigger: trigger,
                 start: "top 10%", 
@@ -316,19 +307,37 @@
               'margin-bottom': '15px',
               autoRound: false
             });
-            
           } else {
-            gsap.to(card, {
+            gsap.to(column, {
               scrollTrigger: {
                 trigger: trigger,
                 start: "top 10%", 
-                scrub: 0.3
+                scrub: 1
               },
-              y: '-50%',
-              'margin-bottom': '15px',
+              y: '-800px',
+              'margin-bottom': '-750px',
               autoRound: false
             });
           }
+        } else {
+          
+          gsap.set(card, {
+            y: '0',
+            'margin-bottom': '0',
+            autoRound: false
+          });
+
+          gsap.to(card, {
+            scrollTrigger: {
+              trigger: trigger,
+              start: "top 10%", 
+              scrub: 0.3
+            },
+            y: '-50%',
+            'margin-bottom': '15px',
+            autoRound: false
+          });
+        }
       });
     }
 

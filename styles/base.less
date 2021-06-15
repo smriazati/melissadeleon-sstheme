@@ -442,8 +442,11 @@ body.homepage {
   }
 
   .card {
-    margin-bottom: 163px;
 
+    margin-bottom: 163px;
+    @media (max-width: @sm-bp) {
+      margin-bottom: 30px;
+    }
     .image-block-wrapper {
       width: 50%;
     }
