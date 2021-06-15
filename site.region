@@ -299,7 +299,7 @@
               scrollTrigger: {
                 trigger: trigger,
                 start: "top 10%", 
-                scrub: 0.3
+                scrub: 0
               },
               y: '-600px',
               'margin-bottom': '15px'
@@ -309,7 +309,7 @@
               scrollTrigger: {
                 trigger: trigger,
                 start: "top 10%", 
-                scrub: 0.3
+                scrub: 0
               },
               y: '-800px',
               'margin-bottom': '-750px'
