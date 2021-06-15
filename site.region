@@ -300,11 +300,11 @@
               scrollTrigger: {
                 trigger: column,
                 start: "top-=200px bottom",
-                scrub: 0.5,
                 toggleActions: "play pause reset reverse"
               },
               y: '-200px',
-              'margin-bottom': '15px'
+              'margin-bottom': '15px',
+              duration: 2
             });
           } else {
             const previous = column.previousElementSibling;
@@ -313,11 +313,11 @@
                 scrollTrigger: {
                 trigger:column.previousElementSibling,
                 start: "bottom-=400px bottom",
-                scrub: 0.5,
                 toggleActions: "play pause reset reverse"
               },
               y: '-300px',
-              'margin-bottom': '-300px'
+              'margin-bottom': '-300px',
+              duration: 2
             });
           }
         } else {
