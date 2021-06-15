@@ -281,7 +281,7 @@
 
     function setCardAnimation() {
       const trigger = document.querySelector('main');
-      const mobileTrigger = document.querySelector('main .submark-top');
+      const mobileTrigger = document.querySelector('main .submark-text');
       const refs = document.querySelectorAll('main .card');
       refs.forEach(card => {
 
@@ -299,25 +299,24 @@
             gsap.to(column, {
               scrollTrigger: {
                 trigger: mobileTrigger,
-                start: "bottom bottom",
-                endTrigger: column,
-                end: "bottom top",
-                scrub: true
+                start: "bottom+=200px bottom"
               },
-              y: '-300px',
-              'margin-bottom': '15px'
+              y: '-200px',
+              'margin-bottom': '15px',
+              duration: 2
             });
           } else {
+            const previous = column.previousElementSibling;
+            console.log(previous);
             gsap.to(column, {
-              scrollTrigger: {
-                trigger: mobileTrigger,
-                start: "bottom bottom",
-                endTrigger: column,
-                end: "bottom top",
-                scrub: true
+                scrollTrigger: {
+                trigger:column.previousElementSibling,
+                start: "bottom-=200px bottom",
+                endTrigger: column
               },
-              y: '-500px',
-              'margin-bottom': '-400px'
+              y: '-300px',
+              'margin-bottom': '-300px',
+              duration: 2
             });
           }
         } else {
