@@ -280,7 +280,7 @@
     }
 
     function setCardAnimation() {
-      const trigger = document.querySelector('main .submark-headline');
+      const trigger = document.querySelector('main .submark-text');
       const refs = document.querySelectorAll('main .card');
       refs.forEach(card => {
 
