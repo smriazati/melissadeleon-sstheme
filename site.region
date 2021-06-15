@@ -280,7 +280,8 @@
     }
 
     function setCardAnimation() {
-      const trigger = document.querySelector('main .submark-headline');
+      const trigger = document.querySelector('main');
+      const mobileTrigger = document.querySelector('main .submark-top');
       const refs = document.querySelectorAll('main .card');
       refs.forEach(card => {
 
@@ -297,22 +298,26 @@
           if (isFirst) {
             gsap.to(column, {
               scrollTrigger: {
-                trigger: trigger,
-                start: "top 10%", 
-                scrub: 0
+                trigger: mobileTrigger,
+                start: "bottom bottom",
+                endTrigger: column,
+                end: "bottom top",
+                scrub: 1
               },
-              y: '-600px',
+              y: '-300px',
               'margin-bottom': '15px'
             });
           } else {
             gsap.to(column, {
               scrollTrigger: {
-                trigger: trigger,
-                start: "top 10%", 
-                scrub: 0
+                trigger: mobileTrigger,
+                start: "bottom bottom",
+                endTrigger: column,
+                end: "bottom top",
+                scrub: 1
               },
-              y: '-800px',
-              'margin-bottom': '-750px'
+              y: '-500px',
+              'margin-bottom': '-400px'
             });
           }
         } else {
