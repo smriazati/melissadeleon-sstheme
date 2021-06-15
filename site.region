@@ -292,8 +292,7 @@
 
           gsap.set(column, {
             y: '0',
-            'margin-bottom': '0',
-            autoRound: false
+            'margin-bottom': '0'
           });
           
           if (isFirst) {
@@ -301,7 +300,7 @@
               scrollTrigger: {
                 trigger: trigger,
                 start: "top 10%", 
-                scrub: 1
+                scrub: 0
               },
               y: '-600px',
               'margin-bottom': '15px',
@@ -312,7 +311,7 @@
               scrollTrigger: {
                 trigger: trigger,
                 start: "top 10%", 
-                scrub: 1
+                scrub: 0
               },
               y: '-800px',
               'margin-bottom': '-750px',
