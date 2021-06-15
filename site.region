@@ -302,7 +302,7 @@
                 start: "bottom bottom",
                 endTrigger: column,
                 end: "bottom top",
-                scrub: 1
+                scrub: true
               },
               y: '-300px',
               'margin-bottom': '15px'
@@ -314,7 +314,7 @@
                 start: "bottom bottom",
                 endTrigger: column,
                 end: "bottom top",
-                scrub: 1
+                scrub: true
               },
               y: '-500px',
               'margin-bottom': '-400px'
