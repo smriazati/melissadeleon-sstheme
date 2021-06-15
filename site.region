@@ -102,9 +102,7 @@
 
     gsap.registerPlugin(ScrollTrigger);
 
-    ScrollTrigger.defaults({
-      toggleActions: "play play resume reset"
-    });
+
 
 
     function printYear() {
