@@ -136,6 +136,7 @@ body {
   font-weight: normal;
   overflow-x: hidden;
   overflow-y: scroll;
+  width: 100vw;
 }
 img {
   max-width: 100%;
@@ -1910,7 +1911,10 @@ body.personal {
  .hero {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: auto;
+      grid-template-rows: 75vh;
+      @media (max-height: 800px) {
+        grid-template-rows: 600px;
+      }
       > * {
         grid-column-start: 1;
         grid-column-end: 2;
