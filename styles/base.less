@@ -167,6 +167,8 @@ a {
   transition: .1s ease opacity;
   flex-direction: column;
   justify-content: space-between;
+
+  overflow: hidden;
 }
 
 .visually-hidden {
@@ -1125,6 +1127,14 @@ body:not(.homepage) {
 /* offerings */
 
 body.offerings {
+
+  /* fix image position with js height function */ 
+  @media (min-width: @sm-bp) {
+    .sqs-block-image .image-block-outer-wrapper:not(.image-block-v2) .intrinsic .image-block-wrapper img { 
+      top: -30% !important;
+    }
+  }
+
   figure.sqs-block-image-figure {
     background: @clay !important;
   }
@@ -1150,6 +1160,13 @@ body.offerings {
       flex: 50%;
     }
 
+    * {
+      height: 100%;
+    }
+    .image-caption,
+    p {
+      height: auto;
+    }
     .sqs-block-image {
       padding-bottom: 0 !important;
     }
