@@ -296,11 +296,11 @@ body.homepage {
       letter-spacing: 0em;
       text-align: left;
     }
-    @media (min-width: 1200px) {
-      .image-block-outer-wrapper:not(.image-block-v2) .image-block-wrapper {
-        padding-bottom: 44% !important;
-      }
-    }
+    // @media (min-width: 1200px) {
+    //   .image-block-outer-wrapper:not(.image-block-v2) .image-block-wrapper {
+    //     padding-bottom: 44% !important;
+    //   }
+    // }
     @media (max-width: @sm-bp) {
       .image-block-outer-wrapper:not(.image-block-v2) .image-block-wrapper {
         padding-bottom: 60% !important;
@@ -2759,6 +2759,16 @@ body.client-template {
     &:hover {
       .freightSansItal;
       font-style: italic;
+    }
+  }
+}
+
+// padding fixes
+
+.home {
+  .card {
+    .sqs-image-shape-container-element {
+      padding-bottom: 0 !important;
     }
   }
 }
