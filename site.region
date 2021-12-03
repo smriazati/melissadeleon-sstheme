@@ -280,7 +280,7 @@
               start: "bottom-=170 top", 
               end: "+=300",
             },
-            'width': '220px',
+            'width': '221px',
             autoRound: false
         });
         navItems.forEach(navItem => {
