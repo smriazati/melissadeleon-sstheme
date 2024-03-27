@@ -17,9 +17,6 @@
     <div class="intro-text-wrapper">
         <h2>The MdS Personal Style Process</h2>
         <p>The MdS Personal Style Process includes three comprehensive phases that will help us connect you to your most authentic, powerful style. We honor the investment and vulnerability it takes to invite us into your views of self and style, and we strive to make the process transformative, fun, and safe.</p>
-
-        
-            
     </div> 
 
     <div class="phases-wrapper">
@@ -28,9 +25,7 @@
                     <h3>Phase 1: Consultation + Style Discovery</h3>
                 </div>
                 <div class="phase-text">
-                    <p>Our most thorough and valuable part of the process. During this phase, we gather your inspirations, learn about your story and lifestyle, and develop your personalized Style Profile. We will teach you practical tools based on our discoveries so you can make confident choices with your style going forward.</p>
-                    <p>We host this phase in a comfortable, well-appointed venue, allowing you to enjoy a sense of intentional relaxation, respite, and care.</p>
-                    <p>We’ll use these findings to curate your personalized MdS Virtual Style Profile. Your Style Profile will be available on a password-protected client portal for you to continuously refer to and interact with, and includes your colors, body type, measurements, mood board, and shoppable links, all in one safe space.</p>
+                    <p>Our most thorough and valuable part of the process. During this phase, we gather your inspirations, learn about your story and lifestyle, and develop your personalized Style Profile. We will teach you practical tools based on our discoveries so you can make confident choices with your style going forward. We host this phase in our studio, allowing you to enjoy a sense of intentional relaxation, respite, and care.We’ll use these findings to curate your personalized MdS Virtual Style Profile. Your Style Profile will be available on a password-protected client portal for you to continuously refer to and interact with, and includes your colors, body type, measurements, and shoppable links, all in one safe space.</p>
                 </div>
                 <div class="phase-image">
                     <img src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/1629999512754-RDLBSNUYQYWZBMMOF88H/%232-Phase-1_-Consultation-%2B-Style-Discovery.jpg?format=1000w" alt="" />
@@ -54,15 +49,24 @@
                     <h3>Phase 3: Shop + Fit</h3>
                 </div>
                 <div class="phase-text">
-                    <p>With every detail of your profile and personal style discoveries at hand, we shop for the most empowering clothing pieces for your life and your style.</p>
-                    <p>We’ll bring the clothing to your home and incorporate these new pieces into your wardrobe. We will help create new outfit pairings using both new and existing wardrobe items, taking photos of each to upload to your Style Profile.</p>
-                    <p>Should any of the new pieces require alterations, we will schedule those fittings until it’s just right. We will also complete any returns or exchanges.</p>
+                    <p>With every detail of your profile and personal style discoveries at hand, we shop for the most empowering clothing pieces for your life and your style. We’ll bring the clothing to our studio so you can try them on and begin to incorporate them into your wardrobe. Should any of the new pieces require alterations, we will schedule those fittings until it’s just right. We will also complete any returns or exchanges.</p>
                 </div>
                 <div class="phase-image">
                     <img src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/1629999513207-OFNEA37N6ASOR03RA98M/%234-Phase-3_-Shop-%2B-Fit.jpg?format=1000w" alt="" />
                 </div>
             </div>
             <div id="phase-4" class="phase-item">
+                <div class="phase-headline">
+                    <h3>Phase 4</h3>
+                </div>
+                <div class="phase-text">
+                    <p>Now that your closet is full of items you love and that fit into your life, we schedule another home visit so we can see your progress and style outfits using both your new and existing items. If needed, we’ll take photos of the outfits we create that you can reference at any time in your password-protected Style Profile. To get you started, I’ll also set aside full-styled looks in your closet so that you have outfits to pull from for when you’re in a pinch.</p>
+                </div>
+                <div class="phase-image">
+                    {#  <img src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/1629999513447-PB7I2DLITINTC4XBZ0Z7/%235-%2B-Beyond.jpg?format=1000w" alt="" />  }
+                </div>
+            </div>
+            <div id="phase-5" class="phase-item">
                 <div class="phase-headline">
                     <h3>+ Beyond</h3>
                 </div>
@@ -107,7 +111,7 @@
                 <h4>Bridal + Wedding Styling</h4>
             </div>
             <div class="accordion-content">
-                <p>Step confidently into a moment you will remember forever. We will be your guide to discovering your true wedding style vision. From selecting wedding colors and outfitting the entire bridal party, to helping you choose the perfect bridal gown and accessories for your day, we take into consideration your personality and story, event season, venue, florals, skin/hair tones and body type. A la carte outfitting services are available for engagement photos, wedding showers, bachelorette events, rehearsal dinner, and honeymoon. <em>Limited Bridal + Wedding Styling spots available for 2021-2022.</em></p>
+                <p>Step confidently into a moment you will remember forever. We will be your guide to discovering your true wedding style vision. From selecting wedding colors and outfitting the entire bridal party, to helping you choose the perfect bridal gown and accessories for your day, we take into consideration your personality and story, event season, venue, florals, skin/hair tones and body type. A la carte outfitting services are available for engagement photos, wedding showers, bachelorette events, rehearsal dinner, and honeymoon. <em>Limited Bridal + Wedding Styling spots available for <span id="futureYear"></span>.</em></p>
             </div>
         </div>
         <div class="accordion-item closed">
@@ -143,6 +147,14 @@
                 <p>Enjoy an evening with friends learning practical personal style tips from us and shopping curated outfits surrounding a specific style theme, such as holiday outfits, day-to-night styling, or working from home. <em>Minimum 8 attendees required.</em></p>
             </div>
         </div>
+                <div class="accordion-item closed">
+            <div class="accordion-headline">
+                <h4>Virtual Services</h4>
+            </div>
+            <div class="accordion-content">
+                <p>Virtual services are an option if you are not local to North Carolina or prefer the extra convenience. If you are interested in a particular service that you would like to make virtual, please let us know in the contact form.</p>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -160,3 +172,10 @@
         <button><a href="/contact">Ready for personalized style guidance? </br> Get In touch here!</a></button>
     </div>
 </div>
+
+  <script>
+    var currentYear = new Date().getFullYear();
+    var nextYear = currentYear + 1;
+    var textContent = currentYear + "-" + nextYear;
+    document.getElementById("futureYear").textContent = textContent;
+  </script>
