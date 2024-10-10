@@ -6,7 +6,16 @@
 
     <!-- include system scripts, page meta, and header code injection -->
     {squarespace-headers}
-    
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16520837355"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-16520837355');
+    </script>
   </head>
   <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
 
@@ -598,5 +607,37 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   
   </script>
+
+
+  <script>
+  //  Contact page thank you message
+  window.addEventListener('load', function() {
+    if (window.location.pathname.includes('/contact')) {
+      document.querySelector('button[type="submit"]').addEventListener('click', function() {
+        var contactTimer = setInterval(function() {
+          if (document.querySelector('.sqs-html-content') && document.querySelector('.sqs-html-content').innerText.includes('Thank you.')) {
+            gtag('event', 'conversion', {
+              'send_to': 'AW-16520837355/WPyTCMK8_q0ZEOvx38U9'
+            });
+
+            clearInterval(contactTimer);
+          }
+        }, 1000);
+      });
+    }
+  });
+
+  // Offerings page view 
+  window.addEventListener('load', function() {
+    if (document.location.pathname.includes('/offerings')) {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-16520837355/ugn2CI7K_q0ZEOvx38U9'
+      });
+    }
+  });
+
+</script>
+
+
   </body>
 </html>
