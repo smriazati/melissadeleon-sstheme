@@ -2793,6 +2793,7 @@ body.shop {
   }
   #productList {
     max-width: 100%;
+    padding-bottom: 60px;
     .product-meta {
       display: flex;
       flex-direction: column; 
@@ -2892,6 +2893,9 @@ body.collection-type-products {
 
 body#cart {
   background: @cream;
+  .site-header {
+    background: transparent;
+  }
   #sqs-cart-container {
     margin-top: 140px;
     max-width: 780px;
@@ -2903,7 +2907,7 @@ body#cart {
     .cart-row-img-wrapper {
       display: none !important;
     }
-    button:not(.flat) {
+    .cart-row-remove {
       background: transparent !important;
     }
     .cart-row-title {
