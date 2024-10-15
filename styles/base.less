@@ -2775,3 +2775,158 @@ body.client-template {
     }
   }
 }
+
+// shop page 
+
+body.shop {
+  background: @cream;
+  .site-header {
+    background: transparent;
+    top: 0;
+  }
+  .site-container {
+    .content-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  #productList {
+    max-width: 100%;
+    .product-meta {
+      display: flex;
+      flex-direction: column; 
+      gap: 16px;
+      .product-title, .product-price {
+        .h2 
+      }
+    }
+  }
+  #productList::before {
+    content: "Shop Digital Products";
+    .h1;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+}
+
+body.collection-type-products {
+  .site-container {
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    #productSummary {
+      display: grid;
+      grid-column-gap: 48px;
+      max-width: 100%;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 104px;
+      @media (max-width: @sm-bp) {
+        grid-template-columns: 1fr;
+      }
+      #productDetails,
+      #productGallery {
+        width: auto;
+      }
+      #productDetails {
+        padding-right: 48px;
+        .product-title {
+          font-size: 48px;
+          line-height: 50px;
+        }
+        .product-excerpt {
+          font-size: 14px;
+          line-height: 20px;
+        }
+        .sqs-add-to-cart-button {
+          background: @clay;
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+
+.absolute-cart-box {
+  top: 0;
+}
+.sqs-pill-shopping-cart-content.dark {
+    border-radius: 0;
+    background: @clay;
+    color: #000;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    .freightSans;
+    .icon {
+      display: none;
+    }
+    .subtotal {
+      position: relative;
+      top: unset;
+      right: unset;
+    }
+    .details {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      .suffix::after {
+        content: "in cart";
+        margin-left: 4px;
+      }
+    }
+    .details, .subtotal .price {
+      text-transform: uppercase !important;
+      font-size: 12px;
+      float: none;
+    }
+}
+
+body#cart {
+  background: @cream;
+  #sqs-cart-container {
+    margin-top: 140px;
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+    h2,
+    .cart-row-variants,
+    .cart-row-qty,
+    .cart-row-img-wrapper {
+      display: none !important;
+    }
+    button:not(.flat) {
+      background: transparent !important;
+    }
+    .cart-row-title {
+      font-family: "FreightNeoProMediumRegular", sans-serif;
+      font-size: 24px;
+      line-height: 28px;
+    }
+    .cart-row-desc {
+      .freightNeoPro;
+    }
+    .cart-checkout-button {
+      background: @clay !important;
+    }
+    .cart-subtotal-price,
+    .cart-subtotal-label {
+      .h2;
+      font-style: italic;
+      font-family: "FreightNeoProMediumRegular", sans-serif;
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+}
+.css-3yq2a2 {
+  text-align: left;
+}
