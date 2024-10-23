@@ -2934,3 +2934,212 @@ body#cart {
 .css-3yq2a2 {
   text-align: left;
 }
+
+.uppercase {
+  text-transform: uppercase;
+}
+.stacked-divs {
+   
+    display: grid;
+    grid-template: 1fr / 1fr;
+    place-items: center;
+  
+   > * {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+  }
+   .below {
+    z-index: 1;
+    background-color: aqua;
+  }
+   .top {
+    z-index: 2;
+    background-color: brown;
+  }
+}
+
+@membership-width: 1120px;
+.membership-container() {
+  max-width: 1120px;
+  margin: 0 auto;
+  width: 100%;
+  @media (max-width: 1120px) {
+    max-width: 95%;
+  }
+}
+
+.button {
+  .h3;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: @cream;
+  background: @night;
+  transition: .3s ease-in all !important;
+  display: flex;
+  text-align: center;
+  padding: 8px 16px;
+}
+.membership {
+  background: @cream;
+  /* hero */
+  .hero {
+    text-align: left;
+    color: #fff;
+    .hero-title {
+      font-size: 48px;
+      line-height: 50px;
+      .freightSans;
+      font-weight: 500;
+      max-width: 840px;
+    }
+    .text-wrapper {
+      justify-self: start;
+      align-self: end;
+      display: flex;
+      flex-direction: column;
+      gap: 88px;
+      .membership-container;
+    }
+  }
+ 
+  
+
+  .cta-1 {
+    padding-top: 88px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    @media (max-width: @sm-bp) {
+      flex-direction: column;
+      gap: 48px;
+    }
+    .membership-container;
+    .cta-text {
+      font-size: 48px;
+      line-height: 50px;
+      .freightSans;
+    }
+    .text-wrapper {
+      width: 80%;
+    }
+  }
+
+  .card-row {
+    padding-top: 48px;
+    .membership-container;
+    ul {
+      display: flex;
+      list-style: none;
+      gap: 36px;
+      > * {
+        width: 25%;
+      }
+    }
+    .text-wrapper p {
+      .freightSans;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 19.8px;
+    }
+  }
+
+  .testimonial {
+    padding: 300px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    text-align: center;
+    .quote {
+      .freightNeoPro;
+      font-size: 22px;
+      font-style: italic;
+      font-weight: 500;
+      line-height: 26.4px;
+    }
+  }
+
+  .cta-2 {
+    .text-wrapper {
+      background: @blush;
+      .membership-container;
+      padding: 100px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      .intro {
+        .freightNeoPro;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 50px;
+      }
+      .price {
+        .freightNeoPro;
+        font-size: 80px;
+        font-weight: 500;
+        line-height: 50px;
+      }
+      .details {
+        .freightNeoPro;
+        font-size: 18px;
+        font-style: italic;
+        font-weight: 500;
+        line-height: 19.8px;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .learn-more {
+    padding: 300px 0;
+    .text-wrapper {
+      max-width: 690px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  .about-melissa {
+    max-width: 690px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      justify-content: center;
+      text-align: center;
+      p {
+        .freightNeoPro;
+        font-size: 22px;
+        font-style: italic;
+        font-weight: 500;
+        line-height: 26.4px;
+      }
+  }
+
+  .cta-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    .button {
+      padding: 24px 16px;
+    }
+  }
+}

@@ -1,6 +1,126 @@
-{% extends "base.html" %}
+<div class="membership">
 
-{% block content %}
-  <h1>This is my custom page</h1>
-  <p>Hand-coded content goes here.</p>
-{% endblock %}
+    <div class="hero stacked-divs">
+        <div class="image-wrapper">
+            <img
+                src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/11c571f8-5bf3-4bfc-9aa6-0f1278326a84/Banner.png" />
+        </div>
+        <div class="text-wrapper">
+            <h1 class="uppercase h3">MDS All Access</h1>
+            <p class="hero-title">Standing in a dressing room unsure of what to buy? Doing endless online window
+                shopping for the right piece? Not sure of what to wear tonight?
+            <p>
+        </div>
+    </div>
+
+    <div class="cta-1">
+        <div class="text-wrapper">
+            <h2 class="cta-text">Get answers to your questions through MdS All-Access for $5/month.</h2>
+        </div>
+        <div class="button-wrapper">
+            <a href="" class="button">Sign Up</a>
+        </div>
+    </div>
+
+    <div class="card-row">
+        <ul>
+            <li class="card-row-item">
+                <div class="image-wrapper">
+                    <img src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/4100163d-84ce-4ceb-9430-4d8edd926232/Rectangle+49.png"
+                        alt="">
+                </div>
+                <div class="text-wrapper">
+                    <p>On the go style input</p>
+                </div>
+            </li>
+            <li class="card-row-item">
+                <div class="image-wrapper">
+                    <img src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/4100163d-84ce-4ceb-9430-4d8edd926232/Rectangle+49.png"
+                        alt="">
+                </div>
+                <div class="text-wrapper">
+                    <p>Direct communication with Melissa</p>
+                </div>
+            </li>
+            <li class="card-row-item">
+                <div class="image-wrapper">
+                    <img src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/4100163d-84ce-4ceb-9430-4d8edd926232/Rectangle+49.png"
+                        alt="">
+                </div>
+                <div class="text-wrapper">
+                    <p>Free digital downloads + other perks like the seasonal shop-able lookbook</p>
+                </div>
+            </li>
+            <li class="card-row-item">
+                <div class="image-wrapper">
+                    <img src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/4100163d-84ce-4ceb-9430-4d8edd926232/Rectangle+49.png"
+                        alt="">
+                </div>
+                <div class="text-wrapper">
+                    <p>Private Instagram club</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="testimonial">
+        <div class="image-wrapper">
+            <img src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/7fdb63b2-a1e9-45a6-83d5-05d4a1ccc6af/Five+Stars.png"
+                alt="">
+        </div>
+        <div class="text-wrapper">
+            <p class="quote">&ldquo;It’s basically like having a best friend in the fashion world.&rdquo; &mdash;Hayley
+                L.</p>
+        </div>
+    </div>
+
+    <div class="cta-2">
+        <div class="text-wrapper">
+            <p class="intro">Become a MdS Insider</p>
+            <p class="price">$5/month</p>
+            <div class="button-wrapper">
+                <a href="" class="button">Sign Up</a>
+            </div>
+            <p class="details">1 month FREE when you sign up for a yearly membership. Cancel anytime etc.</p>
+        </div>
+    </div>
+
+    <div class="learn-more">
+        <div class="text-wrapper">
+            <h2 class="h3">Want to learn more about MDS All-Access?</h2>
+            <p>Let’s be honest. We’ve all been there. You’re in the dressing room and need a professionals advice on
+                which
+                items are the smartest to buy. You’re at home getting dressed for work and need someone more reliable
+                than
+                your husband to tell you what shoe works best with your outfit. You’re seeing everyone wearing wide leg
+                pants and thinking to yourself, “Do I need to buy a pair?”. </p>
+            <p>By joining MdS All-Access, you now have a trusted professional that you can text any style and fashion
+                question, and you’ll get a timely response. You’ll have access to my expertise for simple (or not so
+                simple!) questions as you make your daily fashion decisions. Let's take the worry out of shopping and
+                getting dressed, and go directly to a trusted and trained source.
+            </p>
+        </div>
+    </div>
+
+    <div class="about-melissa">
+        <div class="image-wrapper">
+            <img src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/344fc20c-aefd-471d-80cd-eb009d226f6d/Group+18.png"
+                alt="">
+        </div>
+        <div class="text-wrapper">
+            <p>“I am so excited to offer this convenient and affordable extension of
+                my business to all who need it! Think of me as your pocket stylist that
+                you can text and receive the inside scoop on all things fashion.”
+                — Melissa</p>
+        </div>
+    </div>
+
+    <div class="faqs">
+
+    </div>
+    <div class="cta-3">
+        <div class="button-wrapper">
+            <a href="" class="button">Click here to sign up for mds all-access</a>
+        </div>
+    </div>
+</div>
