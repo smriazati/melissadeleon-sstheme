@@ -116,11 +116,30 @@
     </div>
 
     <div class="faqs">
-
-    </div>
-    <div class="cta-3">
-        <div class="button-wrapper">
-            <a href="" class="button">Click here to sign up for mds all-access</a>
+        <div class="faq-title">
+            <h2 class="h1">FAQs</h2>
+        </div>
+        <div class="accordion-wrapper accordion">
+            <div class="accordion-item closed">
+                <div class="accordion-headline">
+                    <h4>Will I be communicating with Melissa directly, or will this be an automated bot?</h4>
+                </div>
+                <div class="accordion-content">
+                    <p>No bots here! I will be reading and responding to all of your questions myself!</p>
+                </div>
+            </div>
+            <div class="accordion-item closed">
+                <div class="accordion-headline">
+                    <h4>How quickly will I get a response to my question?</h4>
+                </div>
+                <div class="accordion-content">
+                    <p>Content here</p>
+                </div>
+            </div>
+        </div>
+        <div class="cta-3">
+            <div class="button-wrapper">
+                <a href="" class="button">Click here to sign up for mds all-access</a>
+            </div>
         </div>
     </div>
-</div>
