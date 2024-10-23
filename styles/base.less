@@ -2995,8 +2995,24 @@ body#cart {
       .freightSans;
       font-weight: 500;
       max-width: 840px;
+      @media (max-width: 690px) {
+        font-size: 30px;
+        line-height: 36px;
+      }
+    }
+    .image-wrapper {
+      height: 100%;
+      width: 100%;
+      img {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+      }
     }
     .text-wrapper {
+      @media (max-width: 690px) {
+        padding-top: 100px;
+      }
       justify-self: start;
       align-self: end;
       display: flex;
@@ -3017,6 +3033,7 @@ body#cart {
     @media (max-width: @sm-bp) {
       flex-direction: column;
       gap: 48px;
+      text-align: center;
     }
     .membership-container;
     .cta-text {
@@ -3036,8 +3053,24 @@ body#cart {
       display: flex;
       list-style: none;
       gap: 36px;
-      > * {
-        width: 25%;
+      @media (max-width: @sm-bp) {
+        flex-direction: column;
+      }
+      @media (min-width: @sm-bp) {
+        > * {
+          width: 25%;
+        }
+      }
+
+      .card-row-item {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        @media (max-width: @sm-bp) {
+          text-align: center;
+        }
       }
     }
     .text-wrapper p {
@@ -3061,6 +3094,7 @@ body#cart {
       font-style: italic;
       font-weight: 500;
       line-height: 26.4px;
+      padding: 0 16px;
     }
   }
 
@@ -3101,6 +3135,11 @@ body#cart {
 
   .learn-more {
     padding: 300px 0;
+    @media (max-width: 690px) {
+      padding: 100px 0;
+      width: 95%; 
+      margin: 0 auto;
+    }
     .text-wrapper {
       max-width: 690px;
       width: 100%;
@@ -3115,20 +3154,25 @@ body#cart {
 
   .about-melissa {
     max-width: 690px;
-      width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    @media (max-width: 690px) {
+      padding: 100px 0;
+      width: 95%; 
       margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      justify-content: center;
-      text-align: center;
-      p {
-        .freightNeoPro;
-        font-size: 22px;
-        font-style: italic;
-        font-weight: 500;
-        line-height: 26.4px;
-      }
+    }
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+    text-align: center;
+    p {
+      .freightNeoPro;
+      font-size: 22px;
+      font-style: italic;
+      font-weight: 500;
+      line-height: 26.4px;
+    }
   }
 
   .cta-3 {
@@ -3148,6 +3192,11 @@ body#cart {
     max-width: 690px;
     margin: 0 auto;
     width: 100%;
+    @media (max-width: 690px) {
+      padding: 0;
+      width: 95%; 
+      margin: 0 auto;
+    }
     .accordion-headline {
       background: transparent;
     }
