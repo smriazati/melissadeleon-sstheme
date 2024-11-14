@@ -2992,7 +2992,7 @@ body#cart {
     .hero-title {
       font-size: 48px;
       line-height: 50px;
-      .freightSans;
+      .freightNeoPro;
       font-weight: 500;
       max-width: 840px;
       @media (max-width: 690px) {
@@ -3039,7 +3039,7 @@ body#cart {
     .cta-text {
       font-size: 48px;
       line-height: 50px;
-      .freightSans;
+      .freightNeoPro;
     }
     .text-wrapper {
       width: 80%;
@@ -3063,12 +3063,12 @@ body#cart {
       }
 
       .card-row-item {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
+        display: grid;
+        grid-template-rows: 80% 1fr;
         gap: 16px;
         @media (max-width: @sm-bp) {
+          justify-content: center;
+          grid-template-rows: auto;
           text-align: center;
         }
       }
