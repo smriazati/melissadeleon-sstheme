@@ -742,7 +742,7 @@ button.flat {
   flex-direction: row-reverse;
   justify-content: space-between;
   position: fixed;
-  z-index: 100;
+  z-index: 999;
   width: 100%;
 }
 
@@ -2780,7 +2780,7 @@ body.client-template {
 
 body.shop {
   background: @cream;
-  .site-header {
+  .site-header:not(.site-header-open) {
     background: transparent;
     top: 0;
   }
@@ -2858,6 +2858,7 @@ body.collection-type-products {
 
 .absolute-cart-box {
   top: 0;
+  height: 0;
 }
 .sqs-pill-shopping-cart-content.dark {
     border-radius: 0;
