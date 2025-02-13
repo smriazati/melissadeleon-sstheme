@@ -63,29 +63,7 @@
         </ul>
     </div>
 
-    <div class="testimonial">
-        <div class="image-wrapper">
-            <img src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/7fdb63b2-a1e9-45a6-83d5-05d4a1ccc6af/Five+Stars.png"
-                alt="">
-        </div>
-        <div class="text-wrapper">
-            <p class="quote">&ldquo;It’s basically like having a best friend in the fashion world.&rdquo; &mdash;Hayley
-                L.</p>
-        </div>
-    </div>
-
-    <div class="cta-2">
-        <div class="text-wrapper">
-            <p class="intro">Become a MdS Insider</p>
-            <p class="price">$29/month</p>
-            <div class="button-wrapper">
-                <a href="/account/login/create" class="button">Sign Up</a>
-            </div>
-            <p class="details">1 month FREE when you sign up for a yearly membership. Cancel anytime etc.</p>
-        </div>
-    </div>
-
-    <div class="learn-more">
+<div class="learn-more">
         <div class="text-wrapper">
             <h2 class="h3">Want to learn more about MDS All-Access?</h2>
             <p>Let’s be honest. We’ve all been there. You’re in the dressing room and need a professionals advice on
@@ -102,6 +80,30 @@
         </div>
     </div>
 
+
+    <div class="cta-2">
+        <div class="text-wrapper">
+            <p class="intro">Become a MdS Insider</p>
+            <p class="price">$29/month</p>
+            <div class="button-wrapper">
+                <a href="/account/login/create" class="button">Sign Up</a>
+            </div>
+            <p class="details">1 month FREE when you sign up for a yearly membership. Cancel anytime etc.</p>
+        </div>
+    </div>
+
+
+    <div class="testimonial">
+        <div class="image-wrapper">
+            <img src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/7fdb63b2-a1e9-45a6-83d5-05d4a1ccc6af/Five+Stars.png"
+                alt="">
+        </div>
+        <div class="text-wrapper">
+            <p class="quote">&ldquo;It’s basically like having a best friend in the fashion world.&rdquo; &mdash;Hayley
+                L.</p>
+        </div>
+    </div>
+    
     <div class="about-melissa">
         <div class="image-wrapper">
             <img src="https://images.squarespace-cdn.com/content/v1/60944d7900683949d5bec241/344fc20c-aefd-471d-80cd-eb009d226f6d/Group+18.png"
@@ -115,11 +117,11 @@
         </div>
     </div>
 
-    <div class="faqs">
-        <div class="faq-title">
-            <h2 class="h1">FAQs</h2>
-        </div>
-       <div class="accordion-wrapper accordion">
+ <div class="faqs">
+    <div class="faq-title">
+        <h2 class="h1">FAQs</h2>
+    </div>
+    <div class="accordion-wrapper accordion">
         <div class="accordion-item closed">
             <div class="accordion-headline">
                 <h4>Will I be communicating with Melissa directly, or will this be an automated bot?</h4>
@@ -149,7 +151,7 @@
                 <h4>What kinds of questions can I ask?</h4>
             </div>
             <div class="accordion-content">
-                <p>My hope is to become your go-to source for all your style and fashion questions. Whether it’s helping you make buying decisions, giving you suggestions on how to style a particular item or questions about consumerism or the fashion industry as a whole, you can ask me all the things you would text your fashionable best friend. Here are some examples of questions to get you thinking:</p>
+                <p>My hope is to become your go-to source for all your style and fashion questions. Whether it’s helping you make buying decisions, giving you suggestions on how to style a particular item or questions about consumerism or the fashion industry as a whole, you can ask me all the things you would text your fashionable best friend. Here are some examples of questions to get you thinking…</p>
                 <ul style="margin-left: 32px;">
                     <li>“I’m going to a black-tie wedding in a few weeks, where can I find a formal dress under $500?”</li>
                     <li>“How should I style this jacket?”</li>
@@ -165,6 +167,7 @@
                     <li>“What are your favorite brands for trendy and affordable pieces?”</li>
                     <li>“I’m looking to add a new pair of boots to my fall wardrobe this season. What’s in right now? Is there a particular style I should be shopping for?”</li>
                 </ul>
+                <p>... and whatever else!</p>
             </div>
         </div>
         <div class="accordion-item closed">
@@ -184,6 +187,8 @@
             </div>
         </div>
     </div>
+</div>
+
 
         <div class="cta-3">
             <div class="button-wrapper">
