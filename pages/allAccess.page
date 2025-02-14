@@ -1,5 +1,83 @@
 <div class="membership">
-
+<script>
+function joinPricingPlan() {
+  UserAccountApi.joinPricingPlan(
+    "1471a44f-4392-432a-b322-31f96f7be39d",
+    "217c8f85-d339-4918-935a-5e71e9b8aa30",
+    "",
+    false,
+    "MEMBER_AREA_BLOCK",
+    {
+      pricingPlanId: "1471a44f-4392-432a-b322-31f96f7be39d",
+      alignment: "center",
+      showTitle: true,
+      showDescription: true,
+      showPrice: true,
+      showJoinButton: true,
+      showBenefits: true,
+      joinButtonText: "Sign Up",
+      title: "MdS All-Access Subscription",
+      description:
+        "Welcome to MdS All-Access! Your easy resource to get in touch with me, whenever you need some style and fashion-related advice!",
+      benefits: [
+        { description: "On-the-go style input" },
+        { description: "Direct communication with Melissa" },
+        { description: "Shop-able seasonal style guides & look-books" },
+        { description: "Private Instagram community" },
+        { description: "Exclusive insight to private events & sales" },
+      ],
+      pricingOptions: [
+        {
+          id: "217c8f85-d339-4918-935a-5e71e9b8aa30",
+          price: { currency: "USD", value: "29.00" },
+          billingPeriod: { value: 1, unit: "MONTH" },
+          numBillingCycles: 0,
+        },
+        {
+          id: "6ed4a098-fba3-44c1-b8ec-ba8cb4d0e8f9",
+          price: { currency: "USD", value: "319.00" },
+          billingPeriod: { value: 12, unit: "MONTH" },
+          numBillingCycles: 0,
+        },
+      ],
+      pricingType: "RECURRING",
+      isPaywall: true,
+      firstPricingOptionId: "217c8f85-d339-4918-935a-5e71e9b8aa30",
+      firstPricingOptionPriceAmount: "$29.00",
+      firstPricingOptionPriceBillingPeriod: "Every month",
+      hasMultiplePricingOptions: true,
+      leftToggleText: "Monthly",
+      rightToggleText: "Yearly",
+      secondPricingOptionId: "6ed4a098-fba3-44c1-b8ec-ba8cb4d0e8f9",
+      secondPricingOptionPriceAmount: "$319.00",
+      secondPricingOptionPriceBillingPeriod: "Every year",
+      blockId: "yui_3_17_2_1_1737746005436_1751",
+      estimatedDimensions: {
+        estimatedColumnSpanDesktop: 12,
+        sectionColumnsDesktop: 12,
+        estimatedColumnSpanMobile: 12,
+        sectionColumnsMobile: 12,
+      },
+      localizedStrings: {
+        pricingOptionToggleMonthly: { one: "Monthly", other: "{0} Months" },
+        paywallPriceFiniteMonthly: { other: "For {0} months" },
+        pricingOptionToggleWeekly: { other: "{0} Weeks", one: "Weekly" },
+        paywallPriceOTP: "One time",
+        pricingOptionToggleOneTimePayment: "1 Payment",
+        paywallPriceMonthly: { other: "Every {0} months", one: "Every month" },
+        zeroPriceLabel: "Free",
+        paywallPriceYearly: { one: "Every year" },
+        pricingOptionToggleYearly: { one: "Yearly" },
+        paywallPriceFiniteWeekly: { other: "For {0} weeks" },
+        joinButtonLabel: "Join",
+        pricingOptionToggleInstallments: { other: "{0} Payments" },
+        paywallPriceWeekly: { one: "Every week", other: "Every {0} weeks" },
+      },
+      featureFlags: { useCLDRMoneyFormat: true },
+    }
+  );
+}
+</script>
     <div class="hero stacked-divs">
         <div class="image-wrapper">
             <img
@@ -18,7 +96,7 @@
             <h2 class="cta-text">Get answers to your questions through MdS All-Access for $29/month.</h2>
         </div>
         <div class="button-wrapper">
-            <a href="/account/login/create" class="button">Sign Up</a>
+            <button onclick="joinPricingPlan()" data-test="pricing-plan-block-join" class="button">Sign Up</button>
         </div>
     </div>
 
@@ -86,7 +164,7 @@
             <p class="intro">Become a MdS Insider</p>
             <p class="price">$29/month</p>
             <div class="button-wrapper">
-                <a href="/account/login/create" class="button">Sign Up</a>
+                <button onclick="joinPricingPlan()" data-test="pricing-plan-block-join" class="button">Sign Up</button>
             </div>
             <p class="details">1 month FREE when you sign up for a yearly membership. Cancel anytime etc.</p>
         </div>
@@ -192,7 +270,7 @@
 
         <div class="cta-3">
             <div class="button-wrapper">
-                <a href="/account/login/create" class="button">Click here to sign up for mds all-access</a>
+                <button onclick="joinPricingPlan()" data-test="pricing-plan-block-join" class="button">Click here to sign up for mds all-access</button>
             </div>
         </div>
     </div>
