@@ -87,7 +87,13 @@
           </a>
         </nav>
         <div class="footer-copyright">
-          <p>© <span id="copyrightYear"></span> Melissa de Leon Styling. <a href="https://www.otherlove.co/" target="_blank">Made with Otherlove.</a></p>
+          <p>© <span id="copyrightYear"></span> Melissa de Leon Styling. <a href="https://www.otherlove.co/" target="_blank">Made with Otherlove.</a> 
+          <a href="https://melissadeleonstyling.com/privacy-policy" target="_blank">Privacy Policy.</a>
+          <a href="https://melissadeleonstyling.com/terms" target="_blank">Terms of Service.</a>
+          
+          </p>
+
+
         </div>
         <a href="/the-edit" class="footer-icon">
             <div class="icon">
